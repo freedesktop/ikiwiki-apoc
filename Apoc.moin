@@ -1,5 +1,5 @@
 = APOC: A Point of Control =
 == What is APOC? ==
 APOC stands for A Point Of Control, it is a desktop class configuration profile editor, that allows you to define, store and assign profiles in an LDAP based configuration repository, and use these profiles on the desktop to complement applications configuration settings. This makes system administrators life much easier on large desktop deployments.
-||<tablewidth="100%" tablestyle="border-color: white; text-align: center;"> ~+'''Get Apoc'''+~ || ~+'''Learn'''+~ || ~+'''Get Involved'''+~ || ~+'''About Apoc'''+~ ||
+||<tablewidth="100%" text-align: center;"> ~+'''Get Apoc'''+~ || ~+'''Learn'''+~ || ~+'''Get Involved'''+~ || ~+'''About Apoc'''+~ ||
 || [[ImageLink(http://apoc.freedesktop.org/images/downloads.png, ApocDownloads)]] || [[ImageLink(http://apoc.freedesktop.org/images/documentation.png, ApocDocumentation)]] || [[ImageLink(http://apoc.freedesktop.org/images/development.png, ApocGettingInvolved)]] || [[ImageLink(http://apoc.freedesktop.org/images/about.png, ApocAbout)]] ||
