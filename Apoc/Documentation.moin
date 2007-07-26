@@ -1,8 +1,8 @@
 =  Documentation  =
 
 == Common Resources ==
- * [:Apoc/BuildingInstructions:Build APOC from source].
- * [:Apoc/GitOnSolaris:Install Git on Solaris].
+ * [:/BuildingInstructions:Build APOC from source].
+ * [:/GitOnSolaris:Install Git on Solaris].
 
 == Sun Documents ==
 The APOC source code was released from Sun Microsystem's Sun Desktop Manager product. Sun produced documentation for system administrators and developers.
