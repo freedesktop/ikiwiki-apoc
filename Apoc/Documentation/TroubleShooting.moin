@@ -44,59 +44,59 @@ This page describes commonly encountered problems using the Configuration Manage
 
 == Desktop Issues ==
 
-=== Cannot See Any Central Settings At All
+=== Cannot See Any Central Settings At All ===
 
-   * Symptom: no matter which setting is valued using the APOC Manager, no matter for which application (Gnome, Mozilla, !StarOffice, Evolution), the central values are not visible on the desktop.
-   * Possible causes:
-      * the APOC Agent is [[#EnableAPOCAgent][not enabled]].
-      * the APOC Agent is [[#ConfigureAPOCAgent][misconfigured]].
-      * the service daemon (inetd) is [[#EnableInetd][not enabled or not started]].
-      * the LDAP server is [[#StartLDAP][not running]].
-      * the LDAP server has been [[#PrepareLDAP][incorrectly prepared]].
-      * the current user [[#FindUser][doesn't exist]] in the LDAP server.
+ * Symptom: no matter which setting is valued using the APOC Manager, no matter for which application (Gnome, Mozilla, !StarOffice, Evolution), the central values are not visible on the desktop.
+ * Possible causes:
+  * the APOC Agent is [[#EnableAPOCAgent][not enabled]].
+  * the APOC Agent is [[#ConfigureAPOCAgent][misconfigured]].
+  * the service daemon (inetd) is [[#EnableInetd][not enabled or not started]].
+  * the LDAP server is [[#StartLDAP][not running]].
+  * the LDAP server has been [[#PrepareLDAP][incorrectly prepared]].
+  * the current user [[#FindUser][doesn't exist]] in the LDAP server.
 
----+++ Cannot See Any Gnome or Evolution Settings
+=== Cannot See Any Gnome or Evolution Settings ===
 
-   * Symptom: !StarOffice and Mozilla work fine, but the central settings for Gnome applications, including Evolution are not taken into account.
-   * Possible causes:
-      * the GConf adapter is [[#GConfAdapter][not installed or not setup properly]].
+ * Symptom: !StarOffice and Mozilla work fine, but the central settings for Gnome applications, including Evolution are not taken into account.
+ * Possible causes:
+  * the GConf adapter is [[#GConfAdapter][not installed or not setup properly]].
 
----+++ Cannot See Any Mozilla Settings
+=== Cannot See Any Mozilla Settings ===
 
----+++ Cannot See Any !StarOffice Settings
+=== Cannot See Any StarOffice Settings ===
 
----+++ Cannot See Some Settings
+=== Cannot See Some Settings ===
 
-   * Symptom: some settings set using the APOC Manager are not taken into account, while others for the same application are fine.
-   * Possible causes:
-      * a [[#UserPref][local user preference]] has been defined for that setting.
+ * Symptom: some settings set using the APOC Manager are not taken into account, while others for the same application are fine.
+ * Possible causes:
+  * a [[#UserPref][local user preference]] has been defined for that setting.
 
----+++ Settings Are Not Refreshed
+=== Settings Are Not Refreshed ===
 
-   * Symptom: the value of a setting has been changed using the APOC Manager and the new value is not propagated to the desktop application.
-   * Possible causes:
-      * a [[#UserPref][local user preference]] with the same value as the old value has been defined for that setting.
-      * the APOC Agent [[#ChangeDetection][change detection cycle]] has not yet taken place.
+ * Symptom: the value of a setting has been changed using the APOC Manager and the new value is not propagated to the desktop application.
+ * Possible causes:
+  * a [[#UserPref][local user preference]] with the same value as the old value has been defined for that setting.
+  * the APOC Agent [[#ChangeDetection][change detection cycle]] has not yet taken place.
 
----+++ Staroffice And Mozilla Crash On Linux !SunRay
+=== Staroffice And Mozilla Crash On Linux Sun Ray ===
 
-   * Symptom: !StarOffice crashes ( crash reporter displayed ) and !Mozilla crashes ( appears not to start ). Look for *ordinal="__os_exists+0x50"* near the top of the !StarOffice crash reporter stack.
-   * Possible causes:
-      * incompatibility between [[#LibcUt][/usr/lib/libc_ut.so]] ( provided by !SunRay to address audio problems with !SunRay devices ) and !BerkeleyDB used by apoc.
+ * Symptom: !StarOffice crashes ( crash reporter displayed ) and !Mozilla crashes ( appears not to start ). Look for *ordinal="__os_exists+0x50"* near the top of the !StarOffice crash reporter stack.
+ * Possible causes:
+  * incompatibility between [[#LibcUt][/usr/lib/libc_ut.so]] ( provided by !SunRay to address audio problems with !SunRay devices ) and !BerkeleyDB used by apoc.
 
----++ Tests & Solutions
+== Tests & Solutions ==
 
----+++ LDAP Server
+=== LDAP Server ===
 
 The instructions below are in some cases specific to the Sun Directory Server, especially regarding process names and default file locations.
 
 #StartLDAP
----++++ Starting the Server
+==== Starting the Server ====
 
 To check that the LDAP server is running, run the command =ps -ef | grep slapd=. If no process is listed, the LDAP server is not running. To remedy this, run the command =/var/Sun/mps/slapd-&lt;instance&gt;/start-slapd=, replacing &lt;instance&gt; with the instance name of your LDAP server (there will anyway be only one directory with that naming structure in =/var/Sun/mps=).
 
 #PrepareLDAP
----++++ Preparing the Server for APOC
+==== Preparing the Server for APOC ====
 
 To ensure that the LDAP server has been properly setup, perform the following command:
 
