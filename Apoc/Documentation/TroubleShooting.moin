@@ -90,12 +90,12 @@ This page describes commonly encountered problems using the Configuration Manage
 
 The instructions below are in some cases specific to the Sun Directory Server, especially regarding process names and default file locations.
 
-#StartLDAP
+[[Anchor(StartLDAP)]]
 ==== Starting the Server ====
 
 To check that the LDAP server is running, run the command =ps -ef | grep slapd=. If no process is listed, the LDAP server is not running. To remedy this, run the command =/var/Sun/mps/slapd-&lt;instance&gt;/start-slapd=, replacing &lt;instance&gt; with the instance name of your LDAP server (there will anyway be only one directory with that naming structure in =/var/Sun/mps=).
 
-#PrepareLDAP
+[[Anchor(PrepareLDAP)]]
 ==== Preparing the Server for APOC ====
 
 To ensure that the LDAP server has been properly setup, perform the following command:
@@ -106,8 +106,8 @@ where &lt;host&gt;, &lt;port&gt;, and &lt;base&gt; match the values found in eit
 
 Follow the instructions in the installation guide to run the deployment tool and prepare the LDAP server, please note that if the LDAP server uses non-standard attributes or object classes for its organisations, roles or users, or if users are not stored in =ou=People= containers, the file named !OrganisationMapping needs to be modified to reflect these differences *prior* to running the =deployApoc= or =createServiceTree= scripts.
 
-#FindUser
----++++ Finding a User in LDAP
+[[Anchor(FindUser)]]
+==== Finding a User in LDAP ====
 
 To check whether a given user identified by its &lt;username&gt; exists in the LDAP server, run the following command from any machine:
 
@@ -117,42 +117,42 @@ where &lt;host&gt;, &lt;port&gt;, and &lt;base&gt; match the values found in eit
 
 If the above command returns =Cannot connect=, the LDAP server is [[#StartLDAP][not running]]. If it returns no entries, the user doesn't exist in the server or the attribute used is wrong. Add the user to the server and/or verify the [[#ConfigureAPOCMgr][APOC Manager configuration]] and the [[#PrepareLDAP][organisational mapping file]]. If it returns multiple entries, this means the attribute used doesn't uniquely identify a user in the LDAP server and this must be changed, either by using a different attribute or by modifying one of the duplicate entries.
 
-#TestPassword
----++++ Testing a User Password in LDAP
+[[Anchor(TestPassword)]]
+==== Testing a User Password in LDAP ====
 
 To check that a user/password combination is valid for use with the APOC Manager, first run the command used to [[#FindUser][find that user]]. The result of that command will contain a line formatted like =dn: uid=username,&lt;blablabla&gt;,&lt;base&gt;=. The string after =dn:= is the full DN of the user. Then perform the same search, but this time authenticated as that user, by adding before the =-h= flag in the command the string =-D "&lt;full DN&gt;" -w &lt;password&gt;=. If the command returns =Invalid credentials=, the user/password combination is invalid. The best course of action is then to reset the password to a known value using an LDAP administrative tool.
 
----+++ Web Console
+=== Web Console ===
 
-#StartLockhart
----++++ Starting the Web Console
+[[Anchor(StartLockhart)]]
+==== Starting the Web Console ====
 
 To check whether the web console is running, run the command =smcwebserver status=. If it's not running, it can be started with the command =smcwebserver start=.
 
-#ConfigureLockhart
----++++ Configuring the Web Console
+[[Anchor(ConfigureLockhart)]]
+==== Configuring the Web Console ====
 
 To check the web console LDAP authentication module configuration, run the command =smreg list -m= on the web console server. The output should mention a module named =com.sun.apoc.authentication.LdapLoginModule= and list its parameters. Check that the server name and port number, as shown in the =ldap.provider.url= parameter are pointing to your LDAP server, that the base DN from the =ldap.baseDN= parameter is the top of your LDAP data tree, and that the LDAP attribute listed in the =ldap.userAttribute= is indeed the attribute used to uniquely identify user entries in the LDAP server.
 
 If the configuration is incorrect, it can be rectified by going to the directory =/usr/share/webconsole/apoc= and running the command =./configure=. The tool will prompt for the new configuration parameters, please note the following points:
 
-   * LDAP server name: the host name or IP provided here must be reachable by that name from the web console machine;
-   * LDAP search operations user DN and password: these fields can be left blank if the LDAP server allows anonymous connections and searches (which is the case by default for Sun Directory Server and !OpenLDAP). If anonymous access is disabled, the user DN provided must be the full DN of an entry in the LDAP server which has enough permissions to do read and search operations. It doesn't need to be able to perform write operations, and as such, using here the full DN of an administrator entry is overkill.
+ * LDAP server name: the host name or IP provided here must be reachable by that name from the web console machine;
+ * LDAP search operations user DN and password: these fields can be left blank if the LDAP server allows anonymous connections and searches (which is the case by default for Sun Directory Server and !OpenLDAP). If anonymous access is disabled, the user DN provided must be the full DN of an entry in the LDAP server which has enough permissions to do read and search operations. It doesn't need to be able to perform write operations, and as such, using here the full DN of an administrator entry is overkill.
 
-#SetLockhartJava
+[[Anchor(SetLockhartJava)]]
 ---++++ Setting the Web Console Java Environment
 
 The current Web Console Java environment can be checked by running =smreg list -p= and looking at the =java.home= property. This property must point to a valid Java home, and furthermore that Java home must be a JDK and not just a JRE. If this value is incorrectly set, it can be modified by running =smreg add -p java.home=&lt;JAVA_HOME&gt;=, with &lt;JAVA_HOME&gt; pointing to a valid installation, i.e where the executables =javac= can be found in the =bin= subdirectory.
 
----+++ APOC Manager
+=== APOC Manager ===
 
-#InstallAPOCMgr
----++++ Installing APOC Manager
+[[Anchor(InstallAPOCMgr)]]
+==== Installing APOC Manager ====
 
 To check if the APOC Manager is installed in the Web Console, run =smreg list -a=. One of the registered applications must be com.sun.apoc.manager_&lt;version&gt;. If such is not the case, follow the instructions in the installation guide to install the module.
 
-#ConfigureAPOCMgr
----++++ Configuring the APOC Manager
+[[Anchor(ConfigureAPOCMgr)]]
+==== Configuring the APOC Manager ====
 
 To check if the APOC Manager is pointing to the proper LDAP server, check the contents of the file named =policymgr.cfg= located in  =/usr/share/webconsole/apoc/WEB-INF=. That file should contain the host name, port number and base DN of the LDAP repository. If the data in that file is not correct, use the =configure= script as described in the second half of the section on [[#ConfigureLockhart][configuring the Web Console]] to provide the proper values. Checking the values are correct can be done by trying to [[#FindUser][find a user]] in the directory using these parameters.
 
