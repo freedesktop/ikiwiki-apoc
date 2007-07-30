@@ -122,7 +122,7 @@ If the above command returns `Cannot connect`, the LDAP server is [#StartLDAP no
 [[Anchor(TestPassword)]]
 ==== Testing a User Password in LDAP ====
 
-To check that a user/password combination is valid for use with the APOC Manager, first run the command used to [#FindUser find that user]. The result of that command will contain a line formatted like `dn: uid=username,&lt;blablabla&gt;,&lt;base&gt;`. The string after =dn:` is the full DN of the user. Then perform the same search, but this time authenticated as that user, by adding before the `-h` flag in the command the string `-D "<full DN>" -w <password>`. If the command returns `Invalid credentials`, the user/password combination is invalid. The best course of action is then to reset the password to a known value using an LDAP administrative tool.
+To check that a user/password combination is valid for use with the APOC Manager, first run the command used to [#FindUser find that user]. The result of that command will contain a line formatted like `dn: uid=username,<blablabla>,<base>`. The string after `dn:` is the full DN of the user. Then perform the same search, but this time authenticated as that user, by adding before the `-h` flag in the command the string `-D "<full DN>" -w <password>`. If the command returns `Invalid credentials`, the user/password combination is invalid. The best course of action is then to reset the password to a known value using an LDAP administrative tool.
 
 === Web Console ===
 
