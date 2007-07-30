@@ -16,7 +16,7 @@ This page describes commonly encountered problems using the Configuration Manage
 
  * Symptom: you've pointed your browser to the appropriate URL, i.e `https://<your.server>:6789`, but it tells you the connection is refused.
  * Possible causes:
-  * the Web Console is [:#StartLockhart: not running] on the server.
+  * the Web Console is [#StartLockhart not running] on the server.
 
 === Cannot Login ===
 
