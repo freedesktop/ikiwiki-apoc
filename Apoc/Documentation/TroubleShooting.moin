@@ -59,7 +59,7 @@ This page describes commonly encountered problems using the Configuration Manage
 
  * Symptom: !StarOffice and Mozilla work fine, but the central settings for Gnome applications, including Evolution are not taken into account.
  * Possible causes:
-  * the GConf adapter is [[#GConfAdapter not installed or not setup properly]].
+  * the GConf adapter is [#GConfAdapter not installed or not setup properly].
 
 === Cannot See Any Mozilla Settings ===
 
