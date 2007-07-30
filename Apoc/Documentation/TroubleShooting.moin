@@ -106,7 +106,7 @@ ldapsearch [-x] -h <host> -p <port> -b ou=apocregistry,ou=default,ou=organizatio
 
 where <host>, <port>, and <base> match the values found in either the [#ConfigureAPOCMgr APOC Manager configuration] or the [#ConfigureAPOCAgent APOC Agent configuration]. The result of this search should be one entry with unreadable attributes (base 64 encoded values). The `-x` flag may be required or not depending on the version of `ldapsearch` used, try with it and remove it if a usage message is displayed. If no entry is found, that particular <base> on that particular <host> has not been prepared for use with APOC.
 
-Follow the instructions in the installation guide to run the deployment tool and prepare the LDAP server, please note that if the LDAP server uses non-standard attributes or object classes for its organisations, roles or users, or if users are not stored in =ou=People= containers, the file named !OrganisationMapping needs to be modified to reflect these differences *prior* to running the `deployApoc` or `createServiceTree` scripts.
+Follow the instructions in the installation guide to run the deployment tool and prepare the LDAP server, please note that if the LDAP server uses non-standard attributes or object classes for its organisations, roles or users, or if users are not stored in `ou=People` containers, the file named OrganisationMapping needs to be modified to reflect these differences *prior* to running the `deployApoc` or `createServiceTree` scripts.
 
 [[Anchor(FindUser)]]
 ==== Finding a User in LDAP ====
@@ -115,7 +115,7 @@ To check whether a given user identified by its <username> exists in the LDAP se
 
 `ldapsearch [-x] -h <host> -p <port> -b <base> <attribute>=<username> dn`
 
-where &lt;host&gt;, &lt;port&gt;, and &lt;base&gt; match the values found in either the [[#ConfigureAPOCMgr][APOC Manager configuration]] or the [[#ConfigureAPOCAgent][APOC Agent configuration]], and &lt;attribute&gt; is the unique identifier attribute specified during the [#ConfigureLockhart Web Console configuration] or found in the [#PrepareLDAP organisational mapping file]. The `-x` flag may be required or not depending on the version of `ldapsearch` used, try with it and remove it if a usage message is displayed.
+where <host>, <port>, and <base> match the values found in either the [[#ConfigureAPOCMgr][APOC Manager configuration]] or the [[#ConfigureAPOCAgent][APOC Agent configuration]], and &lt;attribute&gt; is the unique identifier attribute specified during the [#ConfigureLockhart Web Console configuration] or found in the [#PrepareLDAP organisational mapping file]. The `-x` flag may be required or not depending on the version of `ldapsearch` used, try with it and remove it if a usage message is displayed.
 
 If the above command returns `Cannot connect`, the LDAP server is [#StartLDAP not running]. If it returns no entries, the user doesn't exist in the server or the attribute used is wrong. Add the user to the server and/or verify the [#ConfigureAPOCMgr APOC Manager configuration] and the [#PrepareLDAP organisational mapping file]. If it returns multiple entries, this means the attribute used doesn't uniquely identify a user in the LDAP server and this must be changed, either by using a different attribute or by modifying one of the duplicate entries.
 
