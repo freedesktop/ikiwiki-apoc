@@ -10,7 +10,7 @@ It is used to reduce the administration time of large desktop deployments. You c
 APOC has three main components.
  * A web application called the Desktop Manager allows the administrator to create and assign profiles in a central repository.
  * On the desktop client, a daemon is responsible for retrieving these profiles and their assignments, and keeping them up to date in a local database.
- * For each configuration system, an adapter is responsible for get the profiles and merge it with the application's local settings.
+ * For each configuration system, an adapter is responsible for getting the profiles and merging it with the application's local settings.
 
 == What is a profile? ==
 
