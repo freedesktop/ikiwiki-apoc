@@ -14,7 +14,7 @@ git clone git://anongit.freedesktop.org/git/apoc
 There are no binary releases yet.
 
 == Getting the source code ==
-(!) Once you have downloaded the source files, see [:ApocBuildingInstructions:Building APOC from source].
+(!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:Building APOC from source].
 === Release Tarballs ===
 ==== Stable releases ====
 There are no stable releases yet.
