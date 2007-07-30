@@ -156,77 +156,77 @@ To check if the APOC Manager is installed in the Web Console, run =smreg list -a
 
 To check if the APOC Manager is pointing to the proper LDAP server, check the contents of the file named =policymgr.cfg= located in  =/usr/share/webconsole/apoc/WEB-INF=. That file should contain the host name, port number and base DN of the LDAP repository. If the data in that file is not correct, use the =configure= script as described in the second half of the section on [[#ConfigureLockhart][configuring the Web Console]] to provide the proper values. Checking the values are correct can be done by trying to [[#FindUser][find a user]] in the directory using these parameters.
 
-#DebugAPOCMgr
----++++ Enabling Debug Log Level for the APOC Manager
+[[Anchor(DebugAPOCMgr)]]
+==== Enabling Debug Log Level for the APOC Manager ====
 
 The current log level of the APOC Manager, which is actually the log level of the Web Console, can be checked by running =smreg list -p= and looking at the =debug.trace.level= property. To force the APOC Manager to generate more traces so that the source of problems can be investigated, this property must be changed by running =smreg add -p debug.trace.level=&lt;log level&gt;=, where &lt;log level&gt; is 3 for the maximum amount of traces.
 
----+++ APOC Agent
+=== APOC Agent ===
 
-#EnableAPOCAgent
----++++ Enabling the APOC Agent
+[[Anchor(EnableAPOCAgent)]]
+==== Enabling the APOC Agent ====
 
 When using the JDS 2, the APOC agent is enabled by default. When using the JDS 3, the tool =apoc-config= must be used and the checkbox labelled =Enable= must be checked for the agent to be available.
 
-#EnableInetd
----++++ Enabling inetd
+[[Anchor(EnableInetd)]]
+==== Enabling inetd ====
 
 To check whether inetd is running, run =ps -ef | grep inetd=. That service is required for the APOC agent to be launched. If it's not running, start it with =/etc/init.d/inetd start=. It can also be enabled like any other runlevel service depending on the platform.
 
-#ConfigureAPOCAgent
----++++ Configuring the APOC Agent
+[[Anchor(ConfigureAPOCAgent)]]
+==== Configuring the APOC Agent ====
 
 When using the JDS 2, the APOC agent configuration is performed using the Preferences->System Preferences->Network Settings->Configuration Agent dialog. When using the JDS 3, the configuration of the APOC agent is done either through this menu or directly by running the =apoc-config= tool. 
 
 In both cases, it is important that the details of the LDAP server, specifically the host name, port number and base DN accurately allow the agent to communicate with the server. One good way of ensuring this is by using the values in these tools to [[#FindUser][find a user]] in the LDAP repository.
 
-#DebugAPOCAgent
----++++ Enabling Debug Log Level for the APOC Agent
+[[Anchor(DebugAPOCAgent)]]
+==== Enabling Debug Log Level for the APOC Agent ====
 
 To get the APOC agent to generate as many traces as possible to facilitate the investigation of problems, its log level must be changed to the value =FINEST=. This can be done on JDS 3 by using the [[#ConfigureAPOCAgent][agent configuration tool]]. Another way (the only one for JDS 2) is to edit the file named =apocd.properties= located in =/opt/apoc/lib= on JDS 2 or =/etc/apoc= on JDS 3 and, if a line containing =LogLevel= exists in that file, replace that line with the exact string =LogLevel=FINEST= or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command =/opt/apoc/bin/apocd reload= on JDS 2 or =/usr/lib/apoc/apocd reload= on JDS 3.
 
-#ChangeDetection
----++++ Managing Change Detection in the APOC Agent
+[[Anchor(ChangeDetection)]]
+==== Managing Change Detection in the APOC Agent ====
 
 By default, the APOC agent checks for changes to the configuration of currently logged in users every hour. It can be forced to perform a change detection by running =/opt/apoc/bin/apocd change-detect= on JDS 2 or =/usr/lib/apoc/apocd change-detect= on JDS 3. To modify the change detection frequency on JDS 3 use the [[#ConfigureAPOCAgent][agent configuration tool]]. Another way (the only one for JDS 2) is to edit the file =apocd.properties=, located in =/opt/apoc/lib= on JDS 2 or =/etc/apoc= on JDS 3 and, if a line containing =ChangeDetectionInterval= (*not* =DaemonChangeDetectionInterval=) exists, replace it with the string =ChangeDetectionInterval=&lt;period&gt;=, where &lt;period&gt; is the number of minutes between detection cycles, or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command =/opt/apoc/bin/apocd reload= on JDS 2 or =/usr/lib/apoc/apocd reload= on JDS 3.
 
----+++ GConf Daemon
+=== GConf Daemon ===
 
-#GConfAdapter
----++++ Enabling APOC in GConf
+[[Anchor(GConfAdapter)]]
+==== Enabling APOC in GConf ====
 
 To check whether APOC is enabled in GConf, verify that the file =path= located in =/etc/gconf/2= contains lines like =apoc:readonly:mandatory@= and =apoc:readonly= and that these lines are not commented out. The fact that a proper session with the APOC agent has been established when a GConf daemon has started can be tested on Linux by looking in the file =messages= located in =/var/log= and looking for =gconfd= messages associated with the user.
 
-#UserPref
----+++ Desktop User Preferences
+[[Anchor((UserPref)]]
+=== Desktop User Preferences ===
 
 If a user has explicitly chosen preferences for the desktop applications, usually by going to the Preferences menu, these preferences will be used by the application instead of the central values set in the APOC Manager. To force a central value to be used, i.e to prevent users from modifying it, the value must be protected. Refer to the administration guide to learn how to protect a value.
 
-#LibcUt
----+++ Incompatibility between !SunRay /usr/lib/libc_ut.so and !BerkeleyDB
+[[Anchor(LibcUt)]]
+=== Incompatibility between Sun Ray /usr/lib/libc_ut.so and BerkeleyDB ===
 
 We are currently working with the !SunRay team to figure out exactly why this incompatibility exists. As a temporary workaround we are providing an alternative version of libc_ut.so available [[http://so-doc.germany.sun.com/Projects/Apoc/Builds/SunRay/libc_ut.so][here]] for download. Once downloaded, you can simply copy this file to /usr/lib/libc_ut.so on your !SunRay server and reboot.
 
 __Please note that, until we have come to an agreement with the !SunRay team on how to correctly address this problem, we cannot vouch for the correctness of this workaround.__
 
----++ When All Else Fails
+== When All Else Fails ==
 
 If the problem doesn't fit one of the above issues, or the tests and solutions offered failed to remedy it, contact [[mailto:apoc-interest@Sun.COM the interest list]], providing a description of the problem and if possible root access to the machine affected by the problem (either the Web Console machine or a desktop one). If providing a root access is not possible, enable debug information on the appropriate machine (the [[#DebugAPOCMgr][Web Console]] or the [[#DebugAPOCAgent][desktop]]), recreate the problem and depending on the nature of the problem, gather and make available (by attaching to the mail or otherwise) the following information:
 
-   * if everything seems to be started and running, but no access to the LDAP server, i.e login or data retrieval, can be achieved, get from the LDAP server:
-      * a copy of the log files located on a Sun Directory Server in =/var/Sun/mps/slapd-&lt;instance&gt;/logs= and named =access= and =errors=, making sure that the logs cover the time at which the problem occurred (these log files are rotated when they reach a certain size, the old files are named with timestamps indicated the period they cover).
-      * the output of =ps -ef=.
-      * if possible, an LDIF dump of the contents of the directory.
-   * if the problem is happening in the APOC Manager, get from the Web Console machine:
-      * the output of =ps -ef=.
-      * the output of =smreg list=.
-      * the output of =smcwebserver status=.
-      * for a Linux machine, the output of =rpm -qi SUNWmcon= and =rpm -q apoc-manager=, for a Solaris one the output of =pkginfo -l SUNWmcon= and =pkginfo -l SUNWapm=.
-      * a copy of the file named =policymgr.cfg= located in =/usr/share/webconsole/apoc/WEB-INF=.
-      * a copy of the file named =consoledebuglog= located in =/var/opt/webconsole=.
-   * if the problem is happening on a desktop, get from the desktop machine:
-      * the output of =ps -ef=.
-      * a copy of the file named =policymgr.properties= located in =/opt/apoc/lib= for JDS 2 or =/etc/apoc= for JDS 3.
-      * a copy of the file named =apocd.log.0= located in =/var/opt/apoc/Logs=.
-      * on Linux only, a copy of the file named =messages= located in =/var/log=.
-      * for a Linux machine, the output of =rpm -qa | grep apoc=, for a Solaris one the output of =pkginfo | grep SUNWap=.
+ * if everything seems to be started and running, but no access to the LDAP server, i.e login or data retrieval, can be achieved, get from the LDAP server:
+  * a copy of the log files located on a Sun Directory Server in =/var/Sun/mps/slapd-&lt;instance&gt;/logs= and named =access= and =errors=, making sure that the logs cover the time at which the problem occurred (these log files are rotated when they reach a certain size, the old files are named with timestamps indicated the period they cover).
+  * the output of =ps -ef=.
+  * if possible, an LDIF dump of the contents of the directory.
+ * if the problem is happening in the APOC Manager, get from the Web Console machine:
+  * the output of =ps -ef=.
+  * the output of =smreg list=.
+  * the output of =smcwebserver status=.
+  * for a Linux machine, the output of =rpm -qi SUNWmcon= and =rpm -q apoc-manager=, for a Solaris one the output of =pkginfo -l SUNWmcon= and =pkginfo -l SUNWapm=.
+  * a copy of the file named =policymgr.cfg= located in =/usr/share/webconsole/apoc/WEB-INF=.
+  * a copy of the file named =consoledebuglog= located in =/var/opt/webconsole=.
+ * if the problem is happening on a desktop, get from the desktop machine:
+  * the output of =ps -ef=.
+  * a copy of the file named =policymgr.properties= located in =/opt/apoc/lib= for JDS 2 or =/etc/apoc= for JDS 3.
+  * a copy of the file named =apocd.log.0= located in =/var/opt/apoc/Logs=.
+  * on Linux only, a copy of the file named =messages= located in =/var/log=.
+  * for a Linux machine, the output of =rpm -qa | grep apoc=, for a Solaris one the output of =pkginfo | grep SUNWap=.
