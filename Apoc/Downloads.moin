@@ -8,7 +8,7 @@ If you don't have git installed, please, read the installation instructions from
 git clone git://anongit.freedesktop.org/git/apoc
 }}}
 
-/!\ Note for Solaris users: see [:ApocGitOnSolaris:Installing Git on Solaris].
+/!\ Note for Solaris users: see [:Apoc/Documentation/GitOnSolaris:Installing Git on Solaris].
 == Getting the binaries ==
 
 There are no binary releases yet.
