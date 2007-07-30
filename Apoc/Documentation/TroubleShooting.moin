@@ -1,50 +1,50 @@
----+ Troubleshooting APOC
+= Troubleshooting APOC =
 
 This page describes commonly encountered problems using the Configuration Manager framework and their possible causes, as well as steps to test these causes and hopefully fix the problems.
 
-%TOC%
+[[TableOfContents(3)]]
 
----++ APOC Manager/Web Console Issues
+== APOC Manager/Web Console Issues ==
 
----+++ Cannot Install
+== Cannot Install ==
 
-   * Symptom: at the end of the installation of the Web Console, a message states that it won't start because there are no registered applications.
-   * Possible causes:
-      * this is perfectly normal, once the APOC Manager module is installed it will start the Web Console.
+ * Symptom: at the end of the installation of the Web Console, a message states that it won't start because there are no registered applications.
+ * Possible causes:
+  * this is perfectly normal, once the APOC Manager module is installed it will start the Web Console.
 
----+++ Connection Refused
+=== Connection Refused ===
 
-   * Symptom: you've pointed your browser to the appropriate URL, i.e =https://&lt;your.server&gt;:6789=, but it tells you the connection is refused.
-   * Possible causes:
-      * the Web Console is [[#StartLockhart][not running]] on the server.
+ * Symptom: you've pointed your browser to the appropriate URL, i.e =https://&lt;your.server&gt;:6789=, but it tells you the connection is refused.
+ * Possible causes:
+  * the Web Console is [[#StartLockhart][not running]] on the server.
 
----+++ Cannot Login
+=== Cannot Login ===
 
-   * Symptom: you've reached the login page of the Web Console, but the user/password combination is rejected.
-   * Possible causes:
-      * the LDAP server is [[#StartLDAP][not running]].
-      * the Web Console LDAP authentication module is [[#ConfigureLockhart][misconfigured]].
-      * the user [[#FindUser][doesn't exist]] in the LDAP server.
-      * the user has a [[#TestPassword][different password]] in the LDAP server.
+ * Symptom: you've reached the login page of the Web Console, but the user/password combination is rejected.
+ * Possible causes:
+  * the LDAP server is [[#StartLDAP][not running]].
+  * the Web Console LDAP authentication module is [[#ConfigureLockhart][misconfigured]].
+  * the user [[#FindUser][doesn't exist]] in the LDAP server.
+  * the user has a [[#TestPassword][different password]] in the LDAP server.
 
----+++ No Configuration Manager Link
+=== No Configuration Manager Link ===
 
-   * Symptom: you've logged in the Web Console, but the application list page doesn't display the APOC Manager.
-   * Possible causes:
-      * the APOC Manager module is [[#InstallAPOCMgr][not installed]].
-      * the user [[#FindUser][doesn't exist]] in the LDAP server but does exist in the users map on the machine.
+ * Symptom: you've logged in the Web Console, but the application list page doesn't display the APOC Manager.
+ * Possible causes:
+  * the APOC Manager module is [[#InstallAPOCMgr][not installed]].
+  * the user [[#FindUser][doesn't exist]] in the LDAP server but does exist in the users map on the machine.
 
----+++ Null Pointer Exception, Tomcat/Java Error or Blank Page
+=== Null Pointer Exception, Tomcat/Java Error or Blank Page ===
 
-   * Symptom: you've entered the APOC Manager but nothing of value is displayed, just a blank page or some errors.
-   * Possible causes:
-      * if the error mentions =NoClassDefFoundError: sun/tools/javac/Main=, the Web Console uses the [[#SetLockhartJava][wrong Java]].
-      * the APOC Manager module is [[#ConfigureAPOCMgr][misconfigured]].
-      * the LDAP server has been [[#PrepareLDAP][incorrectly prepared]].
+ * Symptom: you've entered the APOC Manager but nothing of value is displayed, just a blank page or some errors.
+ * Possible causes:
+  * if the error mentions =NoClassDefFoundError: sun/tools/javac/Main=, the Web Console uses the [[#SetLockhartJava][wrong Java]].
+  * the APOC Manager module is [[#ConfigureAPOCMgr][misconfigured]].
+  * the LDAP server has been [[#PrepareLDAP][incorrectly prepared]].
 
----++ Desktop Issues
+== Desktop Issues ==
 
----+++ Cannot See Any Central Settings At All
+=== Cannot See Any Central Settings At All
 
    * Symptom: no matter which setting is valued using the APOC Manager, no matter for which application (Gnome, Mozilla, !StarOffice, Evolution), the central values are not visible on the desktop.
    * Possible causes:
