@@ -22,44 +22,44 @@ This page describes commonly encountered problems using the Configuration Manage
 
  * Symptom: you've reached the login page of the Web Console, but the user/password combination is rejected.
  * Possible causes:
-  * the LDAP server is [[#StartLDAP][not running]].
-  * the Web Console LDAP authentication module is [[#ConfigureLockhart][misconfigured]].
-  * the user [[#FindUser][doesn't exist]] in the LDAP server.
-  * the user has a [[#TestPassword][different password]] in the LDAP server.
+  * the LDAP server is [#StartLDAP not running].
+  * the Web Console LDAP authentication module is [#ConfigureLockhart misconfigured].
+  * the user [#FindUser doesn't exist] in the LDAP server.
+  * the user has a [#TestPassword different password] in the LDAP server.
 
 === No Configuration Manager Link ===
 
  * Symptom: you've logged in the Web Console, but the application list page doesn't display the APOC Manager.
  * Possible causes:
-  * the APOC Manager module is [[#InstallAPOCMgr][not installed]].
-  * the user [[#FindUser][doesn't exist]] in the LDAP server but does exist in the users map on the machine.
+  * the APOC Manager module is [#InstallAPOCMgr not installed].
+  * the user [#FindUser doesn't exist] in the LDAP server but does exist in the users map on the machine.
 
 === Null Pointer Exception, Tomcat/Java Error or Blank Page ===
 
  * Symptom: you've entered the APOC Manager but nothing of value is displayed, just a blank page or some errors.
  * Possible causes:
-  * if the error mentions =NoClassDefFoundError: sun/tools/javac/Main=, the Web Console uses the [[#SetLockhartJava][wrong Java]].
-  * the APOC Manager module is [[#ConfigureAPOCMgr][misconfigured]].
-  * the LDAP server has been [[#PrepareLDAP][incorrectly prepared]].
+  * if the error mentions `NoClassDefFoundError: sun/tools/javac/Main`, the Web Console uses the [#SetLockhartJava wrong Java].
+  * the APOC Manager module is [#ConfigureAPOCMgr misconfigured].
+  * the LDAP server has been [#PrepareLDAP incorrectly prepared]].
 
 == Desktop Issues ==
 
 === Cannot See Any Central Settings At All ===
 
- * Symptom: no matter which setting is valued using the APOC Manager, no matter for which application (Gnome, Mozilla, !StarOffice, Evolution), the central values are not visible on the desktop.
+ * Symptom: no matter which setting is valued using the APOC Manager, no matter for which application (Gnome, Mozilla, StarOffice, Evolution), the central values are not visible on the desktop.
  * Possible causes:
-  * the APOC Agent is [[#EnableAPOCAgent][not enabled]].
-  * the APOC Agent is [[#ConfigureAPOCAgent][misconfigured]].
-  * the service daemon (inetd) is [[#EnableInetd][not enabled or not started]].
-  * the LDAP server is [[#StartLDAP][not running]].
-  * the LDAP server has been [[#PrepareLDAP][incorrectly prepared]].
-  * the current user [[#FindUser][doesn't exist]] in the LDAP server.
+  * the APOC Agent is [#EnableAPOCAgent not enabled].
+  * the APOC Agent is [#ConfigureAPOCAgent misconfigured].
+  * the service daemon (inetd) is [#EnableInetd not enabled or not started].
+  * the LDAP server is [#StartLDAP not running].
+  * the LDAP server has been [[#PrepareLDAP incorrectly prepared]].
+  * the current user [#FindUser doesn't exist] in the LDAP server.
 
 === Cannot See Any Gnome or Evolution Settings ===
 
  * Symptom: !StarOffice and Mozilla work fine, but the central settings for Gnome applications, including Evolution are not taken into account.
  * Possible causes:
-  * the GConf adapter is [[#GConfAdapter][not installed or not setup properly]].
+  * the GConf adapter is [[#GConfAdapter not installed or not setup properly]].
 
 === Cannot See Any Mozilla Settings ===
 
@@ -69,20 +69,20 @@ This page describes commonly encountered problems using the Configuration Manage
 
  * Symptom: some settings set using the APOC Manager are not taken into account, while others for the same application are fine.
  * Possible causes:
-  * a [[#UserPref][local user preference]] has been defined for that setting.
+  * a [#UserPref local user preference] has been defined for that setting.
 
 === Settings Are Not Refreshed ===
 
  * Symptom: the value of a setting has been changed using the APOC Manager and the new value is not propagated to the desktop application.
  * Possible causes:
-  * a [[#UserPref][local user preference]] with the same value as the old value has been defined for that setting.
-  * the APOC Agent [[#ChangeDetection][change detection cycle]] has not yet taken place.
+  * a [#UserPref local user preference] with the same value as the old value has been defined for that setting.
+  * the APOC Agent [#ChangeDetection change detection cycle] has not yet taken place.
 
 === Staroffice And Mozilla Crash On Linux Sun Ray ===
 
- * Symptom: !StarOffice crashes ( crash reporter displayed ) and !Mozilla crashes ( appears not to start ). Look for *ordinal="__os_exists+0x50"* near the top of the !StarOffice crash reporter stack.
+ * Symptom: StarOffice crashes ( crash reporter displayed ) and Mozilla crashes ( appears not to start ). Look for *ordinal="__os_exists+0x50"* near the top of the StarOffice crash reporter stack.
  * Possible causes:
-  * incompatibility between [[#LibcUt][/usr/lib/libc_ut.so]] ( provided by !SunRay to address audio problems with !SunRay devices ) and !BerkeleyDB used by apoc.
+  * incompatibility between [#LibcUt /usr/lib/libc_ut.so] ( provided by Sun Ray to address audio problems with Sun Ray devices ) and BerkeleyDB used by apoc.
 
 == Tests & Solutions ==
 
@@ -93,109 +93,111 @@ The instructions below are in some cases specific to the Sun Directory Server, e
 [[Anchor(StartLDAP)]]
 ==== Starting the Server ====
 
-To check that the LDAP server is running, run the command =ps -ef | grep slapd=. If no process is listed, the LDAP server is not running. To remedy this, run the command =/var/Sun/mps/slapd-&lt;instance&gt;/start-slapd=, replacing &lt;instance&gt; with the instance name of your LDAP server (there will anyway be only one directory with that naming structure in =/var/Sun/mps=).
+To check that the LDAP server is running, run the command `ps -ef | grep slapd`. If no process is listed, the LDAP server is not running. To remedy this, run the command `/var/Sun/mps/slapd-<instance>/start-slapd`, replacing <instance> with the instance name of your LDAP server (there will anyway be only one directory with that naming structure in `/var/Sun/mps`).
 
 [[Anchor(PrepareLDAP)]]
 ==== Preparing the Server for APOC ====
 
 To ensure that the LDAP server has been properly setup, perform the following command:
 
-=ldapsearch [-x] -h &lt;host&gt; -p &lt;port&gt; -b ou=apocregistry,ou=default,ou=organizationconfig,ou=1.0,ou=apocservice,ou=services,&lt;base&gt; ou=apocregistry sunkeyvalue=
+{{{
+ldapsearch [-x] -h <host> -p <port> -b ou=apocregistry,ou=default,ou=organizationconfig,ou=1.0,ou=apocservice,ou=services<base> ou=apocregistry sunkeyvalue`
+}}}
 
-where &lt;host&gt;, &lt;port&gt;, and &lt;base&gt; match the values found in either the [[#ConfigureAPOCMgr][APOC Manager configuration]] or the [[#ConfigureAPOCAgent][APOC Agent configuration]]. The result of this search should be one entry with unreadable attributes (base 64 encoded values). The =-x= flag may be required or not depending on the version of =ldapsearch= used, try with it and remove it if a usage message is displayed. If no entry is found, that particular &lt;base&gt; on that particular &lt;host&gt; has not been prepared for use with APOC.
+where <host>, <port>, and <base> match the values found in either the [#ConfigureAPOCMgr APOC Manager configuration] or the [#ConfigureAPOCAgent APOC Agent configuration]. The result of this search should be one entry with unreadable attributes (base 64 encoded values). The `-x` flag may be required or not depending on the version of `ldapsearch` used, try with it and remove it if a usage message is displayed. If no entry is found, that particular <base> on that particular <host> has not been prepared for use with APOC.
 
 Follow the instructions in the installation guide to run the deployment tool and prepare the LDAP server, please note that if the LDAP server uses non-standard attributes or object classes for its organisations, roles or users, or if users are not stored in =ou=People= containers, the file named !OrganisationMapping needs to be modified to reflect these differences *prior* to running the =deployApoc= or =createServiceTree= scripts.
 
 [[Anchor(FindUser)]]
 ==== Finding a User in LDAP ====
 
-To check whether a given user identified by its &lt;username&gt; exists in the LDAP server, run the following command from any machine:
+To check whether a given user identified by its <username> exists in the LDAP server, run the following command from any machine:
 
-=ldapsearch [-x] -h &lt;host&gt; -p &lt;port&gt; -b &lt;base&gt; &lt;attribute&gt;=&lt;username&gt; dn=
+`ldapsearch [-x] -h <host> -p <port> -b <base> <attribute>=<username> dn`
 
-where &lt;host&gt;, &lt;port&gt;, and &lt;base&gt; match the values found in either the [[#ConfigureAPOCMgr][APOC Manager configuration]] or the [[#ConfigureAPOCAgent][APOC Agent configuration]], and &lt;attribute&gt; is the unique identifier attribute specified during the [[#ConfigureLockhart][Web Console configuration]] or found in the [[#PrepareLDAP][organisational mapping file]]. The =-x= flag may be required or not depending on the version of =ldapsearch= used, try with it and remove it if a usage message is displayed.
+where &lt;host&gt;, &lt;port&gt;, and &lt;base&gt; match the values found in either the [[#ConfigureAPOCMgr][APOC Manager configuration]] or the [[#ConfigureAPOCAgent][APOC Agent configuration]], and &lt;attribute&gt; is the unique identifier attribute specified during the [#ConfigureLockhart Web Console configuration] or found in the [#PrepareLDAP organisational mapping file]. The `-x` flag may be required or not depending on the version of `ldapsearch` used, try with it and remove it if a usage message is displayed.
 
-If the above command returns =Cannot connect=, the LDAP server is [[#StartLDAP][not running]]. If it returns no entries, the user doesn't exist in the server or the attribute used is wrong. Add the user to the server and/or verify the [[#ConfigureAPOCMgr][APOC Manager configuration]] and the [[#PrepareLDAP][organisational mapping file]]. If it returns multiple entries, this means the attribute used doesn't uniquely identify a user in the LDAP server and this must be changed, either by using a different attribute or by modifying one of the duplicate entries.
+If the above command returns `Cannot connect`, the LDAP server is [#StartLDAP not running]. If it returns no entries, the user doesn't exist in the server or the attribute used is wrong. Add the user to the server and/or verify the [#ConfigureAPOCMgr APOC Manager configuration] and the [#PrepareLDAP organisational mapping file]. If it returns multiple entries, this means the attribute used doesn't uniquely identify a user in the LDAP server and this must be changed, either by using a different attribute or by modifying one of the duplicate entries.
 
 [[Anchor(TestPassword)]]
 ==== Testing a User Password in LDAP ====
 
-To check that a user/password combination is valid for use with the APOC Manager, first run the command used to [[#FindUser][find that user]]. The result of that command will contain a line formatted like =dn: uid=username,&lt;blablabla&gt;,&lt;base&gt;=. The string after =dn:= is the full DN of the user. Then perform the same search, but this time authenticated as that user, by adding before the =-h= flag in the command the string =-D "&lt;full DN&gt;" -w &lt;password&gt;=. If the command returns =Invalid credentials=, the user/password combination is invalid. The best course of action is then to reset the password to a known value using an LDAP administrative tool.
+To check that a user/password combination is valid for use with the APOC Manager, first run the command used to [#FindUser find that user]. The result of that command will contain a line formatted like `dn: uid=username,&lt;blablabla&gt;,&lt;base&gt;`. The string after =dn:` is the full DN of the user. Then perform the same search, but this time authenticated as that user, by adding before the `-h` flag in the command the string `-D "<full DN>" -w <password>`. If the command returns `Invalid credentials`, the user/password combination is invalid. The best course of action is then to reset the password to a known value using an LDAP administrative tool.
 
 === Web Console ===
 
 [[Anchor(StartLockhart)]]
 ==== Starting the Web Console ====
 
-To check whether the web console is running, run the command =smcwebserver status=. If it's not running, it can be started with the command =smcwebserver start=.
+To check whether the web console is running, run the command `smcwebserver status`. If it's not running, it can be started with the command `smcwebserver start`.
 
 [[Anchor(ConfigureLockhart)]]
 ==== Configuring the Web Console ====
 
-To check the web console LDAP authentication module configuration, run the command =smreg list -m= on the web console server. The output should mention a module named =com.sun.apoc.authentication.LdapLoginModule= and list its parameters. Check that the server name and port number, as shown in the =ldap.provider.url= parameter are pointing to your LDAP server, that the base DN from the =ldap.baseDN= parameter is the top of your LDAP data tree, and that the LDAP attribute listed in the =ldap.userAttribute= is indeed the attribute used to uniquely identify user entries in the LDAP server.
+To check the web console LDAP authentication module configuration, run the command `smreg list -m` on the web console server. The output should mention a module named `com.sun.apoc.authentication.LdapLoginModule` and list its parameters. Check that the server name and port number, as shown in the `ldap.provider.url` parameter are pointing to your LDAP server, that the base DN from the `ldap.baseDN` parameter is the top of your LDAP data tree, and that the LDAP attribute listed in the `ldap.userAttribute` is indeed the attribute used to uniquely identify user entries in the LDAP server.
 
-If the configuration is incorrect, it can be rectified by going to the directory =/usr/share/webconsole/apoc= and running the command =./configure=. The tool will prompt for the new configuration parameters, please note the following points:
+If the configuration is incorrect, it can be rectified by going to the directory `/usr/share/webconsole/apoc` and running the command =./configure=. The tool will prompt for the new configuration parameters, please note the following points:
 
  * LDAP server name: the host name or IP provided here must be reachable by that name from the web console machine;
- * LDAP search operations user DN and password: these fields can be left blank if the LDAP server allows anonymous connections and searches (which is the case by default for Sun Directory Server and !OpenLDAP). If anonymous access is disabled, the user DN provided must be the full DN of an entry in the LDAP server which has enough permissions to do read and search operations. It doesn't need to be able to perform write operations, and as such, using here the full DN of an administrator entry is overkill.
+ * LDAP search operations user DN and password: these fields can be left blank if the LDAP server allows anonymous connections and searches (which is the case by default for Sun Directory Server and OpenLDAP). If anonymous access is disabled, the user DN provided must be the full DN of an entry in the LDAP server which has enough permissions to do read and search operations. It doesn't need to be able to perform write operations, and as such, using here the full DN of an administrator entry is overkill.
 
 [[Anchor(SetLockhartJava)]]
 ---++++ Setting the Web Console Java Environment
 
-The current Web Console Java environment can be checked by running =smreg list -p= and looking at the =java.home= property. This property must point to a valid Java home, and furthermore that Java home must be a JDK and not just a JRE. If this value is incorrectly set, it can be modified by running =smreg add -p java.home=&lt;JAVA_HOME&gt;=, with &lt;JAVA_HOME&gt; pointing to a valid installation, i.e where the executables =javac= can be found in the =bin= subdirectory.
+The current Web Console Java environment can be checked by running `smreg list -p` and looking at the `java.home` property. This property must point to a valid Java home, and furthermore that Java home must be a JDK and not just a JRE. If this value is incorrectly set, it can be modified by running `smreg add -p java.home=<JAVA_HOME>`, with <JAVA_HOME> pointing to a valid installation, i.e where the executables `javac` can be found in the =bin= subdirectory.
 
 === APOC Manager ===
 
 [[Anchor(InstallAPOCMgr)]]
 ==== Installing APOC Manager ====
 
-To check if the APOC Manager is installed in the Web Console, run =smreg list -a=. One of the registered applications must be com.sun.apoc.manager_&lt;version&gt;. If such is not the case, follow the instructions in the installation guide to install the module.
+To check if the APOC Manager is installed in the Web Console, run `smreg list -a`. One of the registered applications must be com.sun.apoc.manager_<version>. If such is not the case, follow the instructions in the installation guide to install the module.
 
 [[Anchor(ConfigureAPOCMgr)]]
 ==== Configuring the APOC Manager ====
 
-To check if the APOC Manager is pointing to the proper LDAP server, check the contents of the file named =policymgr.cfg= located in  =/usr/share/webconsole/apoc/WEB-INF=. That file should contain the host name, port number and base DN of the LDAP repository. If the data in that file is not correct, use the =configure= script as described in the second half of the section on [[#ConfigureLockhart][configuring the Web Console]] to provide the proper values. Checking the values are correct can be done by trying to [[#FindUser][find a user]] in the directory using these parameters.
+To check if the APOC Manager is pointing to the proper LDAP server, check the contents of the file named `policymgr.cfg` located in  `/usr/share/webconsole/apoc/WEB-INF`. That file should contain the host name, port number and base DN of the LDAP repository. If the data in that file is not correct, use the `configure` script as described in the second half of the section on [#ConfigureLockhart configuring the Web Console] to provide the proper values. Checking the values are correct can be done by trying to [#FindUser find a user] in the directory using these parameters.
 
 [[Anchor(DebugAPOCMgr)]]
 ==== Enabling Debug Log Level for the APOC Manager ====
 
-The current log level of the APOC Manager, which is actually the log level of the Web Console, can be checked by running =smreg list -p= and looking at the =debug.trace.level= property. To force the APOC Manager to generate more traces so that the source of problems can be investigated, this property must be changed by running =smreg add -p debug.trace.level=&lt;log level&gt;=, where &lt;log level&gt; is 3 for the maximum amount of traces.
+The current log level of the APOC Manager, which is actually the log level of the Web Console, can be checked by running `smreg list -p` and looking at the =debug.trace.level= property. To force the APOC Manager to generate more traces so that the source of problems can be investigated, this property must be changed by running `smreg add -p debug.trace.level=<log level>`, where <log level> is 3 for the maximum amount of traces.
 
 === APOC Agent ===
 
 [[Anchor(EnableAPOCAgent)]]
 ==== Enabling the APOC Agent ====
 
-When using the JDS 2, the APOC agent is enabled by default. When using the JDS 3, the tool =apoc-config= must be used and the checkbox labelled =Enable= must be checked for the agent to be available.
+The tool `apoc-config` must be used and the checkbox labelled `Enable` must be checked for the agent to be available.
 
 [[Anchor(EnableInetd)]]
 ==== Enabling inetd ====
 
-To check whether inetd is running, run =ps -ef | grep inetd=. That service is required for the APOC agent to be launched. If it's not running, start it with =/etc/init.d/inetd start=. It can also be enabled like any other runlevel service depending on the platform.
+To check whether inetd is running, run `ps -ef | grep inetd`. That service is required for the APOC agent to be launched. If it's not running, start it with `/etc/init.d/inetd start`. It can also be enabled like any other runlevel service depending on the platform.
 
 [[Anchor(ConfigureAPOCAgent)]]
 ==== Configuring the APOC Agent ====
 
-When using the JDS 2, the APOC agent configuration is performed using the Preferences->System Preferences->Network Settings->Configuration Agent dialog. When using the JDS 3, the configuration of the APOC agent is done either through this menu or directly by running the =apoc-config= tool. 
+The configuration of the APOC agent is done either through this menu or directly by running the =apoc-config= tool. 
 
-In both cases, it is important that the details of the LDAP server, specifically the host name, port number and base DN accurately allow the agent to communicate with the server. One good way of ensuring this is by using the values in these tools to [[#FindUser][find a user]] in the LDAP repository.
+It is important that the details of the LDAP server, specifically the host name, port number and base DN accurately allow the agent to communicate with the server. One good way of ensuring this is by using the values in these tools to [#FindUser find a user] in the LDAP repository.
 
 [[Anchor(DebugAPOCAgent)]]
 ==== Enabling Debug Log Level for the APOC Agent ====
 
-To get the APOC agent to generate as many traces as possible to facilitate the investigation of problems, its log level must be changed to the value =FINEST=. This can be done on JDS 3 by using the [[#ConfigureAPOCAgent][agent configuration tool]]. Another way (the only one for JDS 2) is to edit the file named =apocd.properties= located in =/opt/apoc/lib= on JDS 2 or =/etc/apoc= on JDS 3 and, if a line containing =LogLevel= exists in that file, replace that line with the exact string =LogLevel=FINEST= or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command =/opt/apoc/bin/apocd reload= on JDS 2 or =/usr/lib/apoc/apocd reload= on JDS 3.
+To get the APOC agent to generate as many traces as possible to facilitate the investigation of problems, its log level must be changed to the value `FINEST`. This can be done on JDS 3 by using the [#ConfigureAPOCAgent agent configuration tool]. Another way is to edit the file named `apocd.properties` located in `/etc/apoc`, if a line containing `LogLevel` exists in that file, replace that line with the exact string `LogLevel=FINEST` or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command `/usr/lib/apoc/apocd reload`.
 
 [[Anchor(ChangeDetection)]]
 ==== Managing Change Detection in the APOC Agent ====
 
-By default, the APOC agent checks for changes to the configuration of currently logged in users every hour. It can be forced to perform a change detection by running =/opt/apoc/bin/apocd change-detect= on JDS 2 or =/usr/lib/apoc/apocd change-detect= on JDS 3. To modify the change detection frequency on JDS 3 use the [[#ConfigureAPOCAgent][agent configuration tool]]. Another way (the only one for JDS 2) is to edit the file =apocd.properties=, located in =/opt/apoc/lib= on JDS 2 or =/etc/apoc= on JDS 3 and, if a line containing =ChangeDetectionInterval= (*not* =DaemonChangeDetectionInterval=) exists, replace it with the string =ChangeDetectionInterval=&lt;period&gt;=, where &lt;period&gt; is the number of minutes between detection cycles, or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command =/opt/apoc/bin/apocd reload= on JDS 2 or =/usr/lib/apoc/apocd reload= on JDS 3.
+By default, the APOC agent checks for changes to the configuration of currently logged in users every hour. It can be forced to perform a change detection by running `/usr/lib/apoc/apocd change-detect`. To modify the change detection frequency use the [#ConfigureAPOCAgent agent configuration tool]. Another way is to edit the file `apocd.properties`, located in `/etc/apoc` and, if a line containing `ChangeDetectionInterval` ('''not''' `DaemonChangeDetectionInterval`) exists, replace it with the string `ChangeDetectionInterval=<period>`, where `<period>` is the number of minutes between detection cycles, or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command `/usr/lib/apoc/apocd reload`.
 
 === GConf Daemon ===
 
 [[Anchor(GConfAdapter)]]
 ==== Enabling APOC in GConf ====
 
-To check whether APOC is enabled in GConf, verify that the file =path= located in =/etc/gconf/2= contains lines like =apoc:readonly:mandatory@= and =apoc:readonly= and that these lines are not commented out. The fact that a proper session with the APOC agent has been established when a GConf daemon has started can be tested on Linux by looking in the file =messages= located in =/var/log= and looking for =gconfd= messages associated with the user.
+To check whether APOC is enabled in GConf, verify that the file `path` located in `/etc/gconf/2` contains lines like `apoc:readonly:mandatory@` and `apoc:readonly` and that these lines are not commented out. The fact that a proper session with the APOC agent has been established when a GConf daemon has started can be tested on Linux by looking in the file `messages` located in `/var/log` and looking for =gconfd= messages associated with the user.
 
 [[Anchor((UserPref)]]
 === Desktop User Preferences ===
@@ -205,28 +207,28 @@ If a user has explicitly chosen preferences for the desktop applications, usuall
 [[Anchor(LibcUt)]]
 === Incompatibility between Sun Ray /usr/lib/libc_ut.so and BerkeleyDB ===
 
-We are currently working with the !SunRay team to figure out exactly why this incompatibility exists. As a temporary workaround we are providing an alternative version of libc_ut.so available [[http://so-doc.germany.sun.com/Projects/Apoc/Builds/SunRay/libc_ut.so][here]] for download. Once downloaded, you can simply copy this file to /usr/lib/libc_ut.so on your !SunRay server and reboot.
+We are currently working with the Sun Ray team to figure out exactly why this incompatibility exists. As a temporary workaround we are providing an alternative version of libc_ut.so available [http://so-doc.germany.sun.com/Projects/Apoc/Builds/SunRay/libc_ut.so here] for download. Once downloaded, you can simply copy this file to `/usr/lib/libc_ut.so` on your Sun Ray server and reboot.
 
 __Please note that, until we have come to an agreement with the !SunRay team on how to correctly address this problem, we cannot vouch for the correctness of this workaround.__
 
 == When All Else Fails ==
 
-If the problem doesn't fit one of the above issues, or the tests and solutions offered failed to remedy it, contact [[mailto:apoc-interest@Sun.COM the interest list]], providing a description of the problem and if possible root access to the machine affected by the problem (either the Web Console machine or a desktop one). If providing a root access is not possible, enable debug information on the appropriate machine (the [[#DebugAPOCMgr][Web Console]] or the [[#DebugAPOCAgent][desktop]]), recreate the problem and depending on the nature of the problem, gather and make available (by attaching to the mail or otherwise) the following information:
+If the problem doesn't fit one of the above issues, or the tests and solutions offered failed to remedy it, contact [[mailto:apoc-interest@Sun.COM the interest list]], providing a description of the problem and if possible root access to the machine affected by the problem (either the Web Console machine or a desktop one). If providing a root access is not possible, enable debug information on the appropriate machine (the [#DebugAPOCMgr Web Console] or the [#DebugAPOCAgent desktop]), recreate the problem and depending on the nature of the problem, gather and make available (by attaching to the mail or otherwise) the following information:
 
  * if everything seems to be started and running, but no access to the LDAP server, i.e login or data retrieval, can be achieved, get from the LDAP server:
-  * a copy of the log files located on a Sun Directory Server in =/var/Sun/mps/slapd-&lt;instance&gt;/logs= and named =access= and =errors=, making sure that the logs cover the time at which the problem occurred (these log files are rotated when they reach a certain size, the old files are named with timestamps indicated the period they cover).
-  * the output of =ps -ef=.
+  * a copy of the log files located on a Sun Directory Server in `/var/Sun/mps/slapd-<instance>/logs` and named =access= and `errors`, making sure that the logs cover the time at which the problem occurred (these log files are rotated when they reach a certain size, the old files are named with timestamps indicated the period they cover).
+  * the output of `ps -ef`.
   * if possible, an LDIF dump of the contents of the directory.
  * if the problem is happening in the APOC Manager, get from the Web Console machine:
-  * the output of =ps -ef=.
-  * the output of =smreg list=.
-  * the output of =smcwebserver status=.
-  * for a Linux machine, the output of =rpm -qi SUNWmcon= and =rpm -q apoc-manager=, for a Solaris one the output of =pkginfo -l SUNWmcon= and =pkginfo -l SUNWapm=.
-  * a copy of the file named =policymgr.cfg= located in =/usr/share/webconsole/apoc/WEB-INF=.
-  * a copy of the file named =consoledebuglog= located in =/var/opt/webconsole=.
+  * the output of `ps -ef`.
+  * the output of `smreg list`.
+  * the output of `smcwebserver status`.
+  * for a RPM based Linux machine, the output of `rpm -qi SUNWmcon` and `rpm -q apoc-manager`, for a Solaris one the output of `pkginfo -l SUNWmcon` and `pkginfo -l SUNWapm`.
+  * a copy of the file named `policymgr.cfg` located in `/usr/share/webconsole/apoc/WEB-INF`.
+  * a copy of the file named `consoledebuglog` located in `/var/opt/webconsole`.
  * if the problem is happening on a desktop, get from the desktop machine:
-  * the output of =ps -ef=.
-  * a copy of the file named =policymgr.properties= located in =/opt/apoc/lib= for JDS 2 or =/etc/apoc= for JDS 3.
-  * a copy of the file named =apocd.log.0= located in =/var/opt/apoc/Logs=.
-  * on Linux only, a copy of the file named =messages= located in =/var/log=.
-  * for a Linux machine, the output of =rpm -qa | grep apoc=, for a Solaris one the output of =pkginfo | grep SUNWap=.
+  * the output of `ps -ef`.
+  * a copy of the file named `policymgr.properties` located in `/opt/apoc/lib` for JDS 2 or =/etc/apoc= for JDS 3.
+  * a copy of the file named `apocd.log.0` located in `/var/opt/apoc/Logs`.
+  * on Linux only, a copy of the file named `messages` located in `/var/log`.
+  * for a RPM bassed Linux machine, the output of `rpm -qa | grep apoc`, for a Solaris one the output of `pkginfo | grep SUNWap`.
