@@ -40,7 +40,7 @@ This page describes commonly encountered problems using the Configuration Manage
  * Possible causes:
   * if the error mentions `NoClassDefFoundError: sun/tools/javac/Main`, the Web Console uses the [#SetLockhartJava wrong Java].
   * the APOC Manager module is [#ConfigureAPOCMgr misconfigured].
-  * the LDAP server has been [#PrepareLDAP incorrectly prepared]].
+  * the LDAP server has been [#PrepareLDAP incorrectly prepared].
 
 == Desktop Issues ==
 
@@ -52,12 +52,12 @@ This page describes commonly encountered problems using the Configuration Manage
   * the APOC Agent is [#ConfigureAPOCAgent misconfigured].
   * the service daemon (inetd) is [#EnableInetd not enabled or not started].
   * the LDAP server is [#StartLDAP not running].
-  * the LDAP server has been [[#PrepareLDAP incorrectly prepared]].
+  * the LDAP server has been [#PrepareLDAP incorrectly prepared].
   * the current user [#FindUser doesn't exist] in the LDAP server.
 
 === Cannot See Any Gnome or Evolution Settings ===
 
- * Symptom: !StarOffice and Mozilla work fine, but the central settings for Gnome applications, including Evolution are not taken into account.
+ * Symptom: StarOffice and Mozilla work fine, but the central settings for Gnome applications, including Evolution are not taken into account.
  * Possible causes:
   * the GConf adapter is [#GConfAdapter not installed or not setup properly].
 
