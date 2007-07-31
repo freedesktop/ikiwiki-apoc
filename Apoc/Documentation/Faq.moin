@@ -14,11 +14,13 @@ APOC has three main components.
 
 == What is a profile? ==
 
-TBA
+Configuration profiles define sets of configuration data, called configuration profiles, for applications or modules. Profiles can be assigned to organizations, domains, hosts, and users. A profile provides a default value for a configuration setting or enforces a value for a configuration key. A profile can also contain profiles that cover multiple applications.
+
+You can use configuration profiles to define default configuration settings for an organization, such as the default unit of measure for rulers in OpenOffice. However, a user can set preferences manually in an application to override such defaults.
 
 == What is an adapter? ==
 
-TBA
+Configuration adapters query the configuration agent for configuration data and provide the data to the applications. The adapters must be installed on every client that you want to manage centrally.
 
 == How does APOC store the configuration? ==
 LDAP and File repositories are supported. The LDAP servers currently supported are:
