@@ -8,7 +8,7 @@ If you don't have git installed, please, read the installation instructions from
 git clone git://anongit.freedesktop.org/git/apoc
 }}}
 
-/!\ '''NOTE''': Here are some notes on how to [:Apoc/Documentation/InstallingGit:installing Git on different platforms].
+/!\ '''NOTE''': To install Git, refer to the [:Apoc/Documentation/InstallingGit:installing Git on different platforms document].
 == Getting the binaries ==
 
 There are no binary releases yet.
