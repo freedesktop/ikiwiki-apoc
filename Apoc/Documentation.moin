@@ -1,8 +1,5 @@
 =  Documentation  =
  * [:/Architechture:Architectural overview]
-== Common Resources ==
- * [:/BuildingInstructions:Build APOC from source].
- * [:/GitOnSolaris:Install Git on Solaris].
 
 == Sun Documents ==
 The APOC source code was released from Sun Microsystem's Sun Desktop Manager product. Sun produced documentation for system administrators and developers.
@@ -10,9 +7,11 @@ The APOC source code was released from Sun Microsystem's Sun Desktop Manager pro
  * [http://docs.sun.com/app/docs/doc/819-2726 Sun Desktop Manager Administration Guide]
  * [http://docs.sun.com/app/docs/doc/819-2728 Sun Desktop Manager Developer Guide]
 
-== Frequently Asked Questions ==
-For common questions and issues, check out [:/Faq:Frequently Asked Questions].
 
-== Troubleshooting ==
-If you have experienced any troubles, check out the [:/TroubleShooting:Trouble Shooting page].
+== Miscellaneous Resources ==
+ * [:/Faq:Frequently Asked Questions]. 
+ * [:/TroubleShooting:Trouble Shooting page].
+ * [:/BuildingInstructions:Build APOC from source].
+ * [:/GitOnSolaris:Install Git on Solaris].
+
  
