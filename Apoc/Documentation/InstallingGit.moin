@@ -1,0 +1,27 @@
+= Installing Git =
+[[TableOfContents()]]
+== Git on Ubuntu/Debian ==
+Look for the package git-core on the Synaptic package management tool, or type this as root:
+{{{
+# apt-get install git-core
+}}}
+
+== Git on Fedora ==
+Type this as root:
+{{{
+# yum install git-core
+}}}
+
+== Git on Solaris ==
+To install Git on Solaris we provide a set of stream packages built from the [http://pkgbuild.sourceforge.net Spec Files Extra] repository. (Thanks to Laszlo Peters for the SFE project and the help on building the binary packages). Git depends on [http://curl.haxx.se/ curl], so you need to install the curl binary too.
+||<tablewidth="70%" tablealign="center" tablestyle="border: 4px none ;"> '''Solaris ONNV''' (Nevada)/x86 || '''Solaris ONNV''' (Nevada)/SPARC || '''Solaris 10'''/x86 ||
+||http://tango.freedesktop.org/static/cvs/tango-icon-theme/22x22/mimetypes/package-x-generic.png [http://apoc.freedesktop.org/downloads/solaris/SFEcurl-7.16.2-nevada-x86.pkg SFE's Curl 7.16.2] || http://tango.freedesktop.org/static/cvs/tango-icon-theme/22x22/mimetypes/package-x-generic.png [http://apoc.freedesktop.org/downloads/solaris/SFEcurl-7.16.2-nevada-sparc.pkg SFE's Curl 7.16.2] || http://tango.freedesktop.org/static/cvs/tango-icon-theme/22x22/mimetypes/package-x-generic.png [http://apoc.freedesktop.org/downloads/solaris/SFEcurl-7.16.2-solaris10-x86.pkg SFE's Curl 7.16.2] ||
+||http://tango.freedesktop.org/static/cvs/tango-icon-theme/22x22/mimetypes/package-x-generic.png [http://apoc.freedesktop.org/downloads/solaris/SFEgit-1.5.2.2-nevada-x86.pkg SFE's Git 1.5.2.2] || http://tango.freedesktop.org/static/cvs/tango-icon-theme/22x22/mimetypes/package-x-generic.png [http://apoc.freedesktop.org/downloads/solaris/SFEgit-1.5.2.2-nevada-sparc.pkg SFE's Git 1.5.2.2] || http://tango.freedesktop.org/static/cvs/tango-icon-theme/22x22/mimetypes/package-x-generic.png [http://apoc.freedesktop.org/downloads/solaris/SFEgit-1.5.2.2-solaris10-x86.pkg SFE's Git 1.5.2.2] ||
+
+
+Download the packages and execute as root:
+
+{{{
+# pkgadd -d SFEcurl-7.16.2-<os>-<platform>.pkg SFEcurl
+# pkgadd -d SFEgit-1.5.2.2-<os>-<platform>.pkg SFEgit
+}}}
