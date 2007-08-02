@@ -10,5 +10,6 @@ attachment:spi-diagram.png
 
 The SPI is able to talk with almost any LDAPv3 server, and also, it's able to store the configuration data in a file based repository, which is designed mostly for testing purposes.
 
-== Desktop Agent and the Policy API ==
+== The Desktop Agent, the Policy API and the Adapters ==
+The Desktop Agent is a daemon that runs on the client side, its responsible of retrieving the configuration data from the repository using the SPI, applications can request for configuration data using the Policy API, which provides a C library to access to the agent.
 == Desktop Manager ==
