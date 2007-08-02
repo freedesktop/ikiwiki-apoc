@@ -1,8 +1,6 @@
 = Architectural Overview =
 [[TableOfContents()]]
 
-[http://docs.sun.com/source/819-2728/images/architecture.gif]
-
 == SPI: Service Provider Interface ==
 The SPI (Service Provider Interface) defines an abstraction layer between the core APOC components, such as the Desktop Agent and the Desktop Manager, and a plugable configuration backend. It allows to navigate and search for entities (organizations, users, roles, domains and hosts) within a given organization structure. Second, it provides an interface for assigning, retrieving and editing of configuration data (profiles) for the various entities. Third, it provides an implementation for merging the different profiles into a resulting configuration setting for a specific host/user combination.
 
