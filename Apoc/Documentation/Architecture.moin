@@ -13,6 +13,8 @@ The Desktop Agent is a daemon that runs on the client side, its responsible of r
 
 attachment:papi-diagram.png
 
-In order to integrate the configuration backend of each application with the desktop agent, an adapter is needed, adapters are small pieces of code that listen to configuration requests on the application and ask the Desktop Agent for applicable configuration keys   
+In order to integrate the configuration backend of each application with the desktop agent, an adapter is needed, adapters are small pieces of code that listen to configuration requests on the application side and ask the Desktop Agent for applicable configuration keys on request.
+
+attachment:adapter-diagram.png
 
 == Desktop Manager ==
