@@ -15,6 +15,6 @@ attachment:papi-diagram.png
 
 In order to integrate the configuration backend of each application with the desktop agent, an adapter is needed, adapters are small pieces of code that listen to configuration requests on the application side and ask the Desktop Agent for applicable configuration keys on request.
 
-||<tablewidth="100%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> attachment:adapters-diagram.png ||<style="border: 0px solid white;"> The Policy API allow this communication through libapoc.so, a small C library to create those adapters. This library wraps a comunication interface against the desktop agent, that goes through an XML stream following a request-response query. ||
+||<tablewidth="100%" tablealign="" tablestyle="float: top; align: top; padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> attachment:adapters-diagram.png ||<style="border: 0px solid white;"> The Policy API allow this communication through libapoc.so, a small C library to create those adapters. This library wraps a comunication interface against the desktop agent, that goes through an XML stream following a request-response query. ||
 
 == Desktop Manager ==
