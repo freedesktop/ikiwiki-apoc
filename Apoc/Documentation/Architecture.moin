@@ -17,4 +17,6 @@ In order to integrate the configuration backend of each application with the des
 
 attachment:adapters-diagram.png
 
+The Policy API allow this communication through libapoc.so, a small C library to create those adapters. This library wraps a comunication interface against the desktop agent, that goes through an XML stream following a request-response query.
+
 == Desktop Manager ==
