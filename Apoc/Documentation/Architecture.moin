@@ -24,3 +24,6 @@ The Desktop Manager is the web user interface for APOC, it allows to create and 
 attachment:manager-diagram.png
 
 The Desktop Manager uses a set of templates which defines the applications and configuration keys available to include into the profiles, it also defines the user interface for each application within the Manager.
+
+
+== Profiles and templates ==
