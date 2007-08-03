@@ -13,9 +13,9 @@ The Desktop Agent is a daemon that runs on the client side, its responsible of r
 
 attachment:papi-diagram.png
 
-In order to integrate the configuration backend of each application with the desktop agent, an adapter is needed, adapters are small pieces of code that listen to configuration requests on the application side and ask the Desktop Agent for applicable configuration keys on request.
 
-attachment:adapters-diagram.png
+attachment:adapters-diagram.png In order to integrate the configuration backend of each application with the desktop agent, an adapter is needed, adapters are small pieces of code that listen to configuration requests on the application side and ask the Desktop Agent for applicable configuration keys on request.
+
 
 The Policy API allow this communication through libapoc.so, a small C library to create those adapters. This library wraps a comunication interface against the desktop agent, that goes through an XML stream following a request-response query.
 
