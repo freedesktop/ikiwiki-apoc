@@ -10,6 +10,7 @@ The SPI is able to talk with almost any LDAPv3 server, and also, it's able to st
 
 == The Desktop Agent, the Policy API and the Adapters ==
 The Desktop Agent is a daemon that runs on the client side, its responsible of retrieving the configuration data from the repository using the SPI.
+
 attachment:papi-diagram.png
 
 == Desktop Manager ==
