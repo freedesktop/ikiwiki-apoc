@@ -22,3 +22,5 @@ In order to integrate the configuration backend of each application with the des
 The Desktop Manager is the web user interface for APOC, it allows to create and deploy configuration profiles into the organization entities such as users, groups, roles and hosts. It uses the SPI to access and store data into the configuration repositories. It's a Java based web interface built on top of the [http://docs.sun.com/app/docs/doc/817-1985/6mhm8o5kj?a=view Java Web Console],
 
 attachment:manager-diagram.png
+
+The Desktop Manager uses a set of templates which defines the applications and configuration keys available to include into the profiles, it also defines the user interface for each application within the Manager.
