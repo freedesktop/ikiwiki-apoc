@@ -30,7 +30,7 @@ In the root path of the source code, you should execute the configure script, if
 $ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
 }}}
 
-/!\ '''NOTE''': We assume here that java, javac and ant are on the binary path, also, the ldapjdk.jar should be in /usr/share/lib/apoc/ldapjdk.jar, it can be changed, look on the --help output of the configure script for details on how to do it.=
+/!\ '''NOTE''': We assume here that java, javac and ant are on the binary path, also, the ldapjdk.jar should be in /usr/share/lib/apoc/ldapjdk.jar, it can be changed, look on the --help output of the configure script for details on how to do it.
 
 If the configuration ends successfully, then you should build and install the sources:
 {{{
