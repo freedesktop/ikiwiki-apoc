@@ -1,5 +1,5 @@
 = Installing Git =
-Git is a distributed control management software where all the [http://www.freedesktop.org freedesktop.org] projects are hosted. In order to get the latest code available for the unstable version of apoc you need to grab it using git. You can see more instructions on how to get the latest source on the [:Apoc/Downloads download section].
+Git is a distributed control management software where all the [http://www.freedesktop.org freedesktop.org] projects are hosted. In order to get the latest code available for the unstable version of apoc you need to grab it using git. You can see more instructions on how to get the latest source on the [:Apoc/Downloads: download section].
 
 [[TableOfContents()]]
 == Git on Ubuntu/Debian ==
