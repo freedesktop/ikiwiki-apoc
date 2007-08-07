@@ -31,3 +31,5 @@ Download the packages and execute as root:
 You might be asked to install SFEdiffutils here, just answer yes.
 
 == Git from Source ==
+
+To grab the Git sources and build it from scratch, look for instructions in the [http://git.or.cz/ official Git site].
