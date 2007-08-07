@@ -27,3 +27,7 @@ Download the packages and execute as root:
 # pkgadd -d SFEcurl-7.16.2-<os>-<platform>.pkg SFEcurl
 # pkgadd -d SFEgit-1.5.2.2-<os>-<platform>.pkg SFEgit
 }}}
+
+You might be asked to install SFEdiffutils here, just answer yes.
+
+== Git from Source ==
