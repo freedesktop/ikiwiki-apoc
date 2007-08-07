@@ -1,5 +1,5 @@
 = APOC: A Point of Control =
-APOC provides a framework to store configuration settings for applications on a network in a central location for users, organizations, and host machines that run the application. In a nutshell, it allows system administrator to centralize the application and desktop configuration management and deployment.
+APOC provides a framework to store configuration settings for applications on a network in a central location for users, organizations, and host machines that run the application. In a nutshell, it allows system administrator to centralize the application and desktop configuration management.
 
 [http://apoc.freedesktop.org/images/apoc.png]
 
