@@ -10,7 +10,7 @@ If you don't have git installed, please, read the installation instructions from
 $ git clone git://anongit.freedesktop.org/git/apoc
 }}}
 
-(!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:Building APOC from source].
+(!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:building APOC from source].
 
 == Getting the binaries ==
 There are no binary releases yet.
