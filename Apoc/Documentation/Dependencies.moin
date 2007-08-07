@@ -16,15 +16,16 @@ Here you can find a comprehensive list of dependencies and instructions on how t
  * Generic Security Services Application Program Interface C library ([http://www.citi.umich.edu/projects/nfsv4/linux/ libgssapi]).
  * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
 
-== Solaris ==
-=== SPI ===
-You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
-[http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
 == Ubuntu ==
 === SPI ===
 {{{
 }}}
 === Desktop Agent ===
-=== Fedora ===
+== Fedora ==
 === SPI ===
+=== Desktop Agent ===
+== Solaris ==
+=== SPI ===
+You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
+[http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
 === Desktop Agent ===
