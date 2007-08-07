@@ -1,0 +1,30 @@
+Here you can find a comprehensive list of dependencies and instructions on how to install the dependencies to build APOC on different platforms for each component.
+
+[[TableOfContets()]]
+
+= Dependencies =
+== SPI ==
+ * [:Apoc/Downloads:Getting APOC source code].
+ * The autotools set (aclocal, automake and autoconf) 1.9 or later
+ * Java SE JDK 1.4 or higher.
+ * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
+ * Apache ANT http://ant.apache.org/
+== Desktop Agent ==
+ * The Apoc SPI and its dependencies.
+ * libtoolize 1.9 or later
+ * Gnome's [http://xmlsoft.org/ libXML2]
+ * Generic Security Services Application Program Interface C library ([http://www.citi.umich.edu/projects/nfsv4/linux/ libgssapi]).
+ * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
+
+== Solaris ==
+=== SPI ===
+You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
+[http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
+== Ubuntu ==
+=== SPI ===
+{{{
+}}}
+=== Desktop Agent ===
+=== Fedora ===
+=== SPI ===
+=== Desktop Agent ===
