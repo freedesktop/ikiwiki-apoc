@@ -1,18 +1,8 @@
 = Building the SPI =
 
-== Step 1: Bootstrapping ==
-The requisites to building from sources are:
- * [:Apoc/Downloads:Getting APOC source code].
- * The autotools set (aclocal, automake and autoconf) 1.9 or later
- * Java SE JDK 1.4 or higher.
- * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
- * Apache ANT http://ant.apache.org/
+Overview and dependencies.
 
-/!\ Note for Solaris users:
-you need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
-[http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
-
-== Step 2: Generating the configure script (only for git repository checkout) ==
+== Step 1: Generating the configure script (only for git repository checkout) ==
 
 Type this on the root of the source directory to generate the configure script:
 
@@ -42,17 +32,9 @@ After all the process, a .jar file called spi.jar should be placed in the folder
 
 = Building the Agent =
 
-== Step 1: Bootstrapping ==
-The requisites to building from sources are:
- * The Apoc SPI and its dependencies.
- * libtoolize 1.9 or later
- * Gnome's [http://xmlsoft.org/ libXML2]
- * Generic Security Services Application Program Interface C library ([http://www.citi.umich.edu/projects/nfsv4/linux/ libgssapi]).
- * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
- 
-== Step 2: Generating the configure script ==
+== Step 1: Generating the configure script ==
 
-Type this to generate the configure script:
+First, make sure you have installed the software listed on the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
 
 {{{
 $ cd agent
