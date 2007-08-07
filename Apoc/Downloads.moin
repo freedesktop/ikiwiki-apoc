@@ -1,21 +1,19 @@
 = Getting Apoc =
-=== Source repository ===
 == Getting the source code ==
+=== Source repository ===
 
-APOC source code is stored in the freedesktop.org's git repository, you can find more info about Git in the [http://git.or.cz/ official git site]. You can also browse the source code using the freedesktop.org [http://gitweb.freedesktop.org/ git web interface]. Check the [:Apoc/Documentation/InstallingGit:Git installation instructions] for different platforms in order to install Git.
+APOC source code is stored in the [http://freedesktop.org freedesktop.org]'s Git repository, you can find more info about Git in the [http://git.or.cz/ official git site]. You can also browse the source code using the freedesktop.org [http://gitweb.freedesktop.org/ git web interface]. Check the  for different platforms in order to install Git in your operating system.
 
-If you don't have git installed, please, read the installation instructions from the [http://git.or.cz/#documentation Git documentation page]. Once installed, run the following command to clone the APOC git repository to your current working directory.
+If you don't have git installed, please, read the installation instructions from the [:Apoc/Documentation/InstallingGit:Git installation instructions]. Once installed, run the following command to clone the APOC git repository to your current working directory.
 
 {{{
-git clone git://anongit.freedesktop.org/git/apoc
+$ git clone git://anongit.freedesktop.org/git/apoc
 }}}
 
 (!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:Building APOC from source].
 
 == Getting the binaries ==
-
 There are no binary releases yet.
-
 === Release Tarballs ===
 ==== Stable releases ====
 There are no stable releases yet.
