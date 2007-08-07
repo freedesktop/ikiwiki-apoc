@@ -2,7 +2,7 @@
 
 == Step 1: Bootstrapping ==
 The requisites to building from sources are:
- * [:ApocDownloads:Getting APOC source code].
+ * [:Apoc/Downloads:Getting APOC source code].
  * The autotools set (aclocal, automake and autoconf) 1.9 or later
  * Java SE JDK 1.4 or higher.
  * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
