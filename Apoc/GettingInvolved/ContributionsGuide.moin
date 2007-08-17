@@ -1,1 +1,6 @@
-asd
+= Contribution Guide =
+There are many ways to help APOC, you can submit [http://bugzilla.freedesktop.org bugs], documentation, translations and if you are brave enough, you can dive into the code and proivide us with patches. To keep the track of the discussion of the changes, and to allow future contributors to check those discussions on the future, patches or any other contributions should be submitted as attachments to bugzilla issues.
+
+== Sun Contribution Agreement ==
+
+In order to protect the interest of the community and our contributors and users, our lawyers have told us to ask contributors to sign the [http://www.sun.com/software/opensource/contributor_agreement.jsp Sun Contributor Agreement] before to accept changes in the upstream repositories. This agreement allows Sun Microsystems to share the copyrights of the contributions and allow us to protect our contributors and the interest of the community against legal challenges. This agreement doesn't ask contributors to lose any rights on their contributions but to share them it doesn't allow Sun to relicense the code under licenses other than the certified by the [http://www.opensource.org/licenses/alphabetical Open Source Initiative].
