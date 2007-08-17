@@ -1,4 +1,3 @@
-= About Apoc =
+= About APOC =
 
-== APOC History ==
-APOC comes from the Sun Desktop Manager product from Sun Microsystems, developed within the Sun Ray Team. Sun has released this code under the name of APOC using a CDDL/GPL dual licensing.
+The A Point of Control (APOC) project comes from the Sun Desktop Manager product from Sun Microsystems, developed within the Sun Ray Team. Sun has released this code under the name of APOC using a CDDL/GPL dual licensing. In the late 2007 Sun released the first components of APOC as free software under the [http://www.sun.com/cddl/ CDDL] license and created a Sun sponsored open source project under the [http://www.freedesktop.org freedesktop.org] site to extend the use of APOC in more operating systems and applications and build a community around it.
