@@ -1,8 +1,12 @@
-= Building the APOC =
+= Building APOC =
 
 [[TableOfContents(2)]]
 
-To get a better understanding of the dependencies between the components please, read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
+
+== Bootstrapping ==
+
+You first need to install all the dependencies, they're listed in the [:Apoc/Documentation/Dependencies: dependencies section]. To get a better understanding of the overall source code, read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
+
 
 == SPI ==
 
@@ -17,7 +21,7 @@ $ ./autogen.sh --help
 
 If no errors, the configure script will be generated successfully and its help output would be shown.
 
-=== Step 3: Calling the configure script ===
+=== Step 2: Calling the configure script ===
 In the root path of the source code, you should execute the configure script, if you want information on how to change the default paths look at the help executing it with the --help output. Note that you have to point to the path where the Mozilla/Netscape LDAP JDK java classes or jar file is installed.
 
 {{{
@@ -45,7 +49,7 @@ $ cd agent
 $ ./autogen.sh --help
 }}}
 
-=== Step 3: Calling the configure script ===
+=== Step 2: Calling the configure script ===
 In the root path of the source code, you should execute the configure script, if you want information on how to change the default paths look at the help executing it with the --help output. You also need to point where the Netscape LDAP path is, and the Berkeley DB one as well. Also, note that you should use the same prefix than the SPI.
 
 {{{
