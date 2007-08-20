@@ -1,8 +1,9 @@
-Here you can find a comprehensive list of dependencies and instructions on how to install the dependencies to build APOC on different platforms for each component.
-
 [[TableOfContents()]]
 
+Here you can find a comprehensive list of dependencies and instructions on how to install the dependencies to build APOC on different platforms for each component.
+
 = Dependencies =
+
 == SPI ==
  * [:Apoc/Downloads:Getting APOC source code].
  * Java SE JDK 1.4 or higher.
