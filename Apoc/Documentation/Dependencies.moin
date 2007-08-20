@@ -21,3 +21,4 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
 [http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
 == Desktop Agent Dependencies ==
+You need to have the SPI and the template packages installed to be able to build the Desktop Agent.
