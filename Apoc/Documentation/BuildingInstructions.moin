@@ -1,8 +1,10 @@
-= Building the SPI =
+= Building the APOC =
 
-Overview and dependencies.
+[[TableOfContents(2)]]
 
-== Step 1: Generating the configure script (only for git repository checkout) ==
+== SPI ==
+
+=== Step 1: Generating the configure script (only for git repository checkout) ===
 
 Type this on the root of the source directory to generate the configure script:
 
@@ -13,7 +15,7 @@ $ ./autogen.sh --help
 
 If no errors, the configure script will be generated successfully and its help output would be shown.
 
-== Step 3: Calling the configure script ==
+=== Step 3: Calling the configure script ===
 In the root path of the source code, you should execute the configure script, if you want information on how to change the default paths look at the help executing it with the --help output. Note that you have to point to the path where the Mozilla/Netscape LDAP JDK java classes or jar file is installed.
 
 {{{
@@ -30,9 +32,9 @@ $ make install
 
 After all the process, a .jar file called spi.jar should be placed in the folder share/lib/apoc under the prefix dir which is /usr/local by default, but you can set as /usr using the configure --prefix argument as shown above.
 
-= Building the Agent =
+== Desktop Agent ==
 
-== Step 1: Generating the configure script ==
+=== Step 1: Generating the configure script ===
 
 First, make sure you have installed the software listed on the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
 
@@ -42,12 +44,11 @@ $ ./autogen.sh --help
 }}}
 
 
-== Step 3: Calling the configure script ==
+=== Step 3: Calling the configure script ===
 In the root path of the source code, you should execute the configure script, if you want information on how to change the default paths look at the help executing it with the --help output. You also need to point where the Netscape LDAP path is, and the Berkeley DB one as well. Also, note that you should use the same prefix than the SPI.
 
 {{{
-$ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar \
-                            --with-bdb-path=/path/to/db.jar
+$ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
 }}}
 
 If the configuration ends successfully, then you should build and install the sources:
