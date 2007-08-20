@@ -5,20 +5,17 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 = Dependencies =
 == SPI ==
  * [:Apoc/Downloads:Getting APOC source code].
- * The autotools set (aclocal, automake and autoconf) 1.9 or later
  * Java SE JDK 1.4 or higher.
- * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
+ * The autotools set (aclocal, automake, libtool and autoconf) 1.9 or later
  * Apache ANT http://ant.apache.org/
+ * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java].
+
 == Desktop Agent ==
  * The Apoc SPI and its dependencies.
- * libtoolize 1.9 or later
  * Gnome's [http://xmlsoft.org/ libXML2]
  * Generic Security Services Application Program Interface C library ([http://www.citi.umich.edu/projects/nfsv4/linux/ libgssapi]).
  * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
 
 = Solaris Instructions =
-== SPI Dependencies ==
 You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
 [http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
-== Desktop Agent Dependencies ==
-You need to have the SPI and the template packages installed to be able to build the Desktop Agent.
