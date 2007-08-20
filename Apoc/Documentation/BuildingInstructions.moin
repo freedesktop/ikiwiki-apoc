@@ -2,7 +2,7 @@
 
 [[TableOfContents(2)]]
 
-To get a better understanding of the dependencies between the components please, read the [Apoc/Documentation/Architecture architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
+To get a better understanding of the dependencies between the components please, read the [Apoc/Documentation/Architecture architectural overview] and the [:http://docs.sun.com/app/docs/doc/819-2728: developer documentation].
 
 == SPI ==
 
