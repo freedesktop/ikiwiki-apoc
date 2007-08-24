@@ -1,16 +1,19 @@
-=  Documentation  =
- * [:/Architecture:Architectural overview]
-
-== Miscellaneous Resources ==
  * [:/Faq:Frequently Asked Questions]. 
  * [:/TroubleShooting:Trouble Shooting page].
- * [:/BuildingInstructions:Build APOC from source].
- * [:/InstallingGit:How to install Git on different platforms].
+
+
+=  Documentation  =
+ * [:/Architecture:Architectural overview]
  * [:/ProfileEditor:Profile Editor Manual]
 
-== Sun Documents ==
+== Miscellaneous Resources ==
+
+ * [:/BuildingInstructions:Build APOC from source].
+ * [:/InstallingGit:How to install Git on different platforms].
+
+== Other Documents ==
 The APOC source code was released from Sun Microsystem's Sun Desktop Manager product. Sun produced documentation for system administrators and developers.
 
  * [http://docs.sun.com/app/docs/doc/819-2726 Sun Desktop Manager Administration Guide]
  * [http://docs.sun.com/app/docs/doc/819-2728 Sun Desktop Manager Developer Guide]
- * [http://docs.sun.com/app/docs/doc/819-2725 Sun Desktop Manager Installation Guide]
+ * [http://www.sun.com/bigadmin/features/articles/desktop_mgmt.html BigAdmin Article about APOC]
