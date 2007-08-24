@@ -1,8 +1,6 @@
- * [:/Faq:Frequently Asked Questions]. 
- * [:/TroubleShooting:Trouble Shooting page].
-
-||<) tablewidth="80%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white; color: #254457; font-size: 12px; text-align: center;"style="border: 0px solid white;">[[ImageLink(http://apoc.freedesktop.org/images/faq.png, /Faq)]]||<( style="border: 0px solid white;"> '''[:/Faq:Frequently Asked Questions]''' ||<) style="border: 0px solid white;"> [[ImageLink(http://apoc.freedesktop.org/images/troubleshooting.png, /TroubleShooting)]] ||<( style="border: 0px solid white;"> '''[:/TroubleShooting:Trouble Shooting]'''||
 =  Documentation  =
+||<) tablewidth="80%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white; color: #254457; font-size: 12px; text-align: center;"style="border: 0px solid white;">[[ImageLink(http://apoc.freedesktop.org/images/faq.png, /Faq)]]||<( style="border: 0px solid white;"> '''[:/Faq:Frequently Asked Questions]''' ||<) style="border: 0px solid white;"> [[ImageLink(http://apoc.freedesktop.org/images/troubleshooting.png, /TroubleShooting)]] ||<( style="border: 0px solid white;"> '''[:/TroubleShooting:Trouble Shooting]'''||
+
  * [:/Architecture:Architectural overview]
  * [:/ProfileEditor:Profile Editor Manual]
 
