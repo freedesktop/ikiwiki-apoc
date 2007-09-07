@@ -13,9 +13,6 @@ The SPI can interact with a variety of configuration data repositories. These in
 == The Desktop Agent, the Policy API and the Adapters ==
 The Desktop Agent is a daemon that runs on the client side. Its responsibility is to provide access to configuration data stored in the centralised repository. To do this effectively, it maintains a locally cached version of the relevant data. This cached data is retrieved using the SPI and is refreshed periodically. Access to the Agent and the configuration data that it maintinas is available via the Policy API (libapoc.so). Currently the Policy API is available only as a native ( C ) shared object.
 
-attachment:papi-diagram.png
-
-In order to integrate the configuration backend of each application with the desktop agent, an adapter is needed, adapters are small pieces of code that listen to configuration requests on the application side and ask the Desktop Agent for applicable configuration keys on request.
 
 ||<tablewidth="100%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> attachment:adapters-diagram.png ||<style="float: top; align: top; border: 0px solid white;"> The Policy API allow this integration through libapoc.so, a small C library to create those adapters. This library wraps a communication interface against the desktop agent, that goes through an XML stream following a request-response query. ||
 
