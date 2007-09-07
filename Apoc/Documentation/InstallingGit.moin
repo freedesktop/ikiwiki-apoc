@@ -1,11 +1,11 @@
 = Installing Git =
-Git is a distributed control management software where all the [http://www.freedesktop.org freedesktop.org] projects are hosted. In order to get the latest code available for the unstable version of apoc you need to grab it using git. You can see more instructions on how to get the latest source on the [:Apoc/Downloads: download section].
+Git is a distributed control management software used by the [http://www.freedesktop.org freedesktop.org] to host its projects. In order to get the latest code available for the latest version or other code branches of APOC you need to use a Git client to fetch it. You can see more instructions on how to get the latest APOC source code on the [:Apoc/Downloads: download section].
 
 [[TableOfContents()]]
 == Git on Ubuntu/Debian ==
-Look for the package git-core on the Synaptic package management tool, or type this as root:
+Look for the package git-core on the Synaptic package management tool, or typing this:
 {{{
-# apt-get install git-core
+$ sudo apt-get install git-core
 }}}
 
 == Git on Fedora ==
