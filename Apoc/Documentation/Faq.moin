@@ -1,47 +1,45 @@
 = Frequently Asked Questions =
 [[TableOfContents()]]
 == What is APOC? ==
-APOC stands for A Point Of Control, it is a desktop class configuration profile editor, that allows you to define, store and assign profiles in an LDAP based configuration repository, and use these profiles on the desktop to complement applications configuration settings. This makes system administrators life much easier on large desktop deployments.
+APOC stands for A Point Of Control, it is a desktop class configuration profile editor, that allows you to define, store and assign profiles in an LDAP or file based configuration repository. These profiles may  subsequently be used on the desktop to complement applications configuration settings.
 
 == What is it used for? ==
 It is used to reduce the administration time of large desktop deployments. You can edit user preferences and apply them into hundred of machines/users using just a web interface.
 
-== How does it works? ==
+== How does it work? ==
 
 APOC has three main components.
- * A web application called the Desktop Manager allows the administrator to create and assign profiles in a central repository.
- * On the desktop client, a daemon is responsible for retrieving these profiles and their assignments, and keeping them up to date in a local database.
- * For each configuration system, an adapter is responsible for getting the profiles and merging it with the application's local settings.
+ * A web application called the Desktop Manager allows the administrator to create and assign configuration profiles in a central repository.
+ * The Desktop Manager is a daemon is responsible for retrieving these profiles and their assignments, and keeping them up to date in a local database on the application host.
+ * For each supported desktop application, an APOC adapter is responsible for retreiving relevant APOC configuration data and merging it with the application's local configuration settings.
 
 == What is a profile? ==
 
-Configuration profiles define sets of configuration data, called configuration profiles, for applications or modules. Profiles can be assigned to organizations, domains, hosts, and users. A profile provides a default value for a configuration setting or enforces a value for a configuration key. A profile can also contain profiles that cover multiple applications.
-
-You can use configuration profiles to define default configuration settings for an organization, such as the default unit of measure for rulers in OpenOffice. However, a user can set preferences manually in an application to override such defaults.
+Configuration profiles define logically releated sets of configuration for supported applications. Profiles can be assigned to organizations, domains, hosts, and users. A profile provides a default value for a configuration setting or enforces a value for a configuration key.
 
 == What is an adapter? ==
 
-Configuration adapters query the configuration agent for configuration data and provide the data to the applications. The adapters must be installed on every client that you want to manage centrally.
+Each of the supported desktop applications uses its own configuration adapter to query the Desktop Agent for its configuration data. The adapters must be installed on every client that you want to manage centrally.
 
-== How does APOC store the configuration? ==
-LDAP and File repositories are supported. The LDAP servers currently supported are:
+== How does APOC store configuration? ==
+A master copy of all APOC configuration data is stored and maintained by the Desktop Manager in a centralised configuration datastore (LDAP or file based). On each desktop machine, the APOC agent maintains a cache of needed configuration data for use by desktop applications. In both cases, the APOC SPI is used to do the actual storage and retrieval of configuration data. The LDAP servers currently tested are:
+
  * Sun Java System Directory Server Enterprise Edition
  * OpenLDAP
  * iPlanet Directory Server
  * Fedora Directory Server
  * Microsoft Active Directory
- * And in theory, anything that talks LDAP v3
 
 == Which applications works with APOC? ==
 
- * All GNOME applications through GConf
+ * Any application using GConf to access its configuration. This includes a large subset of GNOME applications.
  * Java applications using the Java Preferences API
  * Firefox
 
-Other application adapters (such as for !OpenOffice.org) might be released in the future.
+Other application adapters (such as for OpenOffice.org) might be released in the future.
 
 == In which language is it developed? ==
-It is mostly developed in Java, however the adapters are developed in the main language of each application (C for the GConf adapter, C++ for Firefox).
+It is mostly developed in Java. However the adapters are developed in the main language of each application (C for the GConf adapter, C++ for Firefox).
 
 == Which operating systems are supported by APOC? ==
-APOC has been tested on Solaris, Linux and Windows. However, it shouldn't be too hard to port it to other UNIX environments.
+APOC has been tested on Solaris and Linux. However, the desing allows to port it easily to other UNIX environments.
