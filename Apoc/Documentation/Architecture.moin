@@ -2,14 +2,16 @@
 [[TableOfContents()]]
 
 == SPI: Service Provider Interface ==
-The SPI (Service Provider Interface) defines an abstraction layer between the core APOC components, such as the Desktop Agent and the Desktop Manager, and a plugable configuration backend. It allows to navigate and search for entities (organizations, users, roles, domains and hosts) within a given organization structure. Second, it provides an interface for assigning, retrieving and editing of configuration data (profiles) for the various entities. Third, it provides an implementation for merging the different profiles into a resulting configuration setting for a specific host/user combination.
+The SPI (Service Provider Interface) defines an abstraction layer between the core APOC components, such as the Desktop Agent and the Desktop Manager, and a pluggable configuration backend. It supports navigation and search for entities (organizations, users, roles, domains and hosts) within a given organization structure. It also provides an interface for assigning, retrieving and editing of configuration data (profiles) for the various entity types and supports merging of different profiles into a resulting configuration set for a specific host/user combination.
 
 attachment:spi-diagram.png
 
-The SPI is able to talk with almost any LDAPv3 server, and also, it's able to store the configuration data in a file based repository, which is designed mostly for testing purposes.
+The SPI can interact with a variety of configuration data repositories. These include any LDAPv3 compilant server and any file based repository accessible via file, http or https url.
+
+/!\ NOTE: Access to file based repositories was included largely for testing purposes.
 
 == The Desktop Agent, the Policy API and the Adapters ==
-The Desktop Agent is a daemon that runs on the client side, its responsible of retrieving the configuration data from the repository using the SPI.
+The Desktop Agent is a daemon that runs on the client side. Its responsibility is to provide access to configuration data stored in the centralised repository. To do this effectively, it maintains a locally cached version of the relevant data. This cached data is retrieved using the SPI and is refreshed periodically. Access to the Agent and the configuration data that it maintinas is available via the Policy API (libapoc.so). Currently the Policy API is available only as a native ( C ) shared object.
 
 attachment:papi-diagram.png
 
