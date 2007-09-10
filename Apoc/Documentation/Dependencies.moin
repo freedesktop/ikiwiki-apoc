@@ -17,6 +17,12 @@ Here you can find a comprehensive list of dependencies and instructions on how t
  * Generic Security Services Application Program Interface C library ([http://www.citi.umich.edu/projects/nfsv4/linux/ libgssapi]).
  * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
 
+= Ubuntu Instructions =
+
+{{{
+$ sudo apt-get install ant automake-1.9 autoconf sun-java6-jdk libdb4.2-java-dev
+}}}
+
 = Solaris Instructions =
 You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the 
 [http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe OpenSolaris.org JDS CBE documentation page].
