@@ -20,7 +20,7 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 = Ubuntu Instructions =
 
 {{{
-$ sudo apt-get install ant automake-1.9 autoconf sun-java6-jdk libdb4.2-java-dev
+$ sudo apt-get install ant automake-1.9 autoconf sun-java6-jdk libdb4.2-java-dev libgssapi-dev
 }}}
 
 = Solaris Instructions =
