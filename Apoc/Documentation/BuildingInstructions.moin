@@ -3,7 +3,7 @@
 [[TableOfContents(2)]]
 
 
-== Bootstrapping ==
+== Bootstrap ==
 
 You first need to install all the dependencies, they're listed in the [:Apoc/Documentation/Dependencies: dependencies section]. To get a better understanding of the overall source code, read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
 
