@@ -140,7 +140,7 @@ If the configuration is incorrect, it can be rectified by going to the directory
  * LDAP search operations user DN and password: these fields can be left blank if the LDAP server allows anonymous connections and searches (which is the case by default for Sun Directory Server and OpenLDAP). If anonymous access is disabled, the user DN provided must be the full DN of an entry in the LDAP server which has enough permissions to do read and search operations. It doesn't need to be able to perform write operations, and as such, using here the full DN of an administrator entry is overkill.
 
 [[Anchor(SetLockhartJava)]]
----++++ Setting the Web Console Java Environment
+==== Setting the Web Console Java Environment ====
 
 The current Web Console Java environment can be checked by running `smreg list -p` and looking at the `java.home` property. This property must point to a valid Java home, and furthermore that Java home must be a JDK and not just a JRE. If this value is incorrectly set, it can be modified by running `smreg add -p java.home=<JAVA_HOME>`, with <JAVA_HOME> pointing to a valid installation, i.e where the executables `javac` can be found in the {{{bin/}}} subdirectory.
 
