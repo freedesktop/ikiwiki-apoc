@@ -178,7 +178,7 @@ It is important that the details of the LDAP server, specifically the host name,
 [[Anchor(DebugAPOCAgent)]]
 ==== Enabling Debug Log Level for the APOC Agent ====
 
-To get the APOC agent to generate as many traces as possible to facilitate the investigation of problems, its log level must be changed to the value `FINEST`. This can be done on JDS 3 by using the [#ConfigureAPOCAgent agent configuration tool]. Another way is to edit the file named `apocd.properties` located in `/etc/apoc`, if a line containing `LogLevel` exists in that file, replace that line with the exact string `LogLevel=FINEST` or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command `/usr/lib/apoc/apocd reload`.
+To get the APOC agent to generate as many traces as possible to facilitate the investigation of problems, its log level must be changed to the value `FINEST`. This can be done editing the file named `apocd.properties` located in `/etc/apoc`, if a line containing `LogLevel` exists in that file, replace that line with the exact string `LogLevel=FINEST` or if no such line exists, just add the string at the end of the file. Force the agent to reload its configuration by running the command `/usr/lib/apoc/apocd reload`.
 
 [[Anchor(ChangeDetection)]]
 ==== Managing Change Detection in the APOC Agent ====
