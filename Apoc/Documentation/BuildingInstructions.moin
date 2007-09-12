@@ -58,7 +58,7 @@ In the root path of the source code, you should execute the configure script.For
 $ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
 }}}
 
-/!\ NOTE: You should use the same prefix than the SPI. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location.
+/!\ '''NOTE''': You should use the same prefix than the SPI. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location.
 
 === Step 3: Building the sources ===
 
@@ -72,7 +72,7 @@ $ make install
 
 To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF databse should be updated manually.
 
-/!\ TBA: Link to the agent configuration instructions.
+/!\ '''TBA''': Link to the agent configuration instructions.
 
 == Profile Editor ==
 
