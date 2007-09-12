@@ -36,7 +36,7 @@ $ make
 $ make install
 }}}
 
-After all the process, a .jar file called spi.jar should be placed in the folder share/lib/apoc under the prefix dir which is /usr/local by default, but you can set as /usr using the configure --prefix argument as shown above.
+Once complete, the SPI jar file, spi.jar should be available under your prefix directory as share/lib/apoc/spi.jar.
 
 == Desktop Agent ==
 
@@ -63,5 +63,10 @@ If the configuration ends successfully, then you should build and install the so
 $ make
 $ make install
 }}}
+
+=== Post Installation ===
+
+To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually.
+An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF databse should be updated manually.
 
 == Profile Editor ==
