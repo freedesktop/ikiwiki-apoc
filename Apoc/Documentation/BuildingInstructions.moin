@@ -30,6 +30,8 @@ $ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
 
 /!\ '''NOTE''': We assume here that java, javac and ant are in the binary path. The ldapjdk.jar would be looked by default on /usr/share/lib/apoc/ldapjdk.jar, it can be located elsewhere, use the --with-ns-ldap-path option used in the example for any other location.
 
+=== Step 3: Building the sources ===
+
 If the configuration ends successfully, then you should build and install the sources:
 {{{
 $ make
@@ -57,6 +59,8 @@ $ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
 }}}
 
 /!\ NOTE: You should use the same prefix than the SPI. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location.
+
+=== Step 3: Building the sources ===
 
 If the configuration ends successfully, then you should build and install the sources:
 {{{
@@ -91,6 +95,8 @@ $ ./configure --prefix=/usr
 }}}
 
 /!\ '''NOTE''': You should use the same prefix than the SPI.
+
+=== Step 3: Building the sources ===
 
 If the configuration ends successfully, then you should build and install the sources:
 {{{
