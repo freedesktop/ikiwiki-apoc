@@ -66,7 +66,34 @@ $ make install
 
 === Post Installation ===
 
-To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually.
-An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF databse should be updated manually.
+To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF databse should be updated manually.
+
+/!\ TBA: Link to the agent configuration instructions.
 
 == Profile Editor ==
+
+=== Step 1: Generating the configure script (only for sources from git) ===
+
+Type this in the root path of the source code to generate the configure script:
+
+{{{
+$ cd profile-editor
+$ ./autogen.sh --help
+}}}
+
+If no errors occur, the configure script will be generated successfully and its help output would be shown.
+
+=== Step 2: Calling the configure script ===
+In the root path of the source code, you should execute the configure script. If you want information on how to change the default paths look at the help executing it with the --help output.
+
+{{{
+$ ./configure --prefix=/usr
+}}}
+
+/!\ '''NOTE''': You should use the same prefix than the SPI.
+
+If the configuration ends successfully, then you should build and install the sources:
+{{{
+$ make
+$ make install
+}}}
