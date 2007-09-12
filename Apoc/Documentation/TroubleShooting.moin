@@ -166,12 +166,12 @@ The current log level of the APOC Manager, which is actually the log level of th
 [[Anchor(EnableAPOCAgent)]]
 ==== Enabling the APOC Agent ====
 
-The tool `apoc-config` must be used and the checkbox labelled `Enable` must be checked for the agent to be available.
+To be added.
 
 [[Anchor(ConfigureAPOCAgent)]]
 ==== Configuring the APOC Agent ====
 
-The configuration of the APOC agent is done either through this menu or directly by running the {{{apoc-config}}} tool. 
+The configuration of the APOC agent is done running the {{{apoc-config}}} tool. 
 
 It is important that the details of the LDAP server, specifically the host name, port number and base DN accurately allow the agent to communicate with the server. One good way of ensuring this is by using the values in these tools to [#FindUser find a user] in the LDAP repository.
 
