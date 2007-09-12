@@ -30,7 +30,7 @@ A master copy of all APOC configuration data is stored and maintained by the Des
  * Fedora Directory Server
  * Microsoft Active Directory
 
-== Which applications works with APOC? ==
+== Which applications work with APOC? ==
 
  * Any application using GConf to access its configuration. This includes a large subset of GNOME applications.
  * Java applications using the Java Preferences API
