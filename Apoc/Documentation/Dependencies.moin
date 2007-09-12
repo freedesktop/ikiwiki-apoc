@@ -14,13 +14,13 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 == Desktop Agent ==
  * The Apoc SPI and its dependencies.
  * Gnome's [http://xmlsoft.org/ libXML2]
- * Generic Security Services Application Program Interface C library ([http://www.citi.umich.edu/projects/nfsv4/linux/ libgssapi]).
+ * Heimdal's Generic Security Services C implementation ([http://www.pdc.kth.se/heimdal/ gssapi]).
  * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
 
 = Ubuntu Instructions =
 
 {{{
-$ sudo apt-get install ant automake-1.9 autoconf sun-java6-jdk libdb4.2-java-dev libgssapi-dev libxml2-dev
+$ sudo apt-get install ant automake-1.9 autoconf sun-java6-jdk libdb4.2-java-dev libgssapi4-heimdal heimdal-dev libxml2-dev
 }}}
 
 = Solaris Instructions =
