@@ -5,30 +5,30 @@
 
 == Bootstrap ==
 
-You first need to install all the dependencies. They're listed in the [:Apoc/Documentation/Dependencies: dependencies section]. To get a better understanding of the overall source code, read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
+You first need to install all the dependencies. They're listed in the [:Apoc/Documentation/Dependencies: dependencies section]. To get a better overall understanding of the source code read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
 
 
 == SPI ==
 
-=== Step 1: Generating the configure script (only for git repository checkout) ===
+=== Step 1: Generating the configure script (only for sources from git) ===
 
-Type this on the root of the source directory to generate the configure script:
+Type this in the root path of the source code to generate the configure script:
 
 {{{
 $ cd spi
 $ ./autogen.sh --help
 }}}
 
-If no errors, the configure script will be generated successfully and its help output would be shown.
+If no errors occur, the configure script will be generated successfully and its help output would be shown.
 
 === Step 2: Calling the configure script ===
-In the root path of the source code, you should execute the configure script, if you want information on how to change the default paths look at the help executing it with the --help output. Note that you have to point to the path where the Mozilla/Netscape LDAP JDK java classes or jar file is installed.
+In the root path of the source code, you should execute the configure script. If you want information on how to change the default paths look at the help executing it with the --help output. Note that you have to point to the path where the Mozilla/Netscape LDAP JDK java classes or jar file is installed.
 
 {{{
 $ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
 }}}
 
-/!\ '''NOTE''': We assume here that java, javac and ant are on the binary path, also, the ldapjdk.jar should be in /usr/share/lib/apoc/ldapjdk.jar, it can be changed, look on the --help output of the configure script for details on how to do it.
+/!\ '''NOTE''': We assume here that java, javac and ant are in the binary path, also, the ldapjdk.jar should be in /usr/share/lib/apoc/ldapjdk.jar, it can be changed, look at the --help output of the configure script for details on how to do it.
 
 If the configuration ends successfully, then you should build and install the sources:
 {{{
@@ -42,7 +42,7 @@ After all the process, a .jar file called spi.jar should be placed in the folder
 
 === Step 1: Generating the configure script ===
 
-First, make sure you have installed the software listed on the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
+First, make sure you have installed the software listed in the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
 
 {{{
 $ cd agent
@@ -50,7 +50,7 @@ $ ./autogen.sh --help
 }}}
 
 === Step 2: Calling the configure script ===
-In the root path of the source code, you should execute the configure script, if you want information on how to change the default paths look at the help executing it with the --help output. You also need to point where the Netscape LDAP path is, and the Berkeley DB one as well. Also, note that you should use the same prefix than the SPI.
+In the root path of the source code, you should execute the configure script.For more information on changing the default paths, execute configure with the --help option. You also need to point where the Berkeley DB jar or classpath is. Also, note that you should use the same prefix than the SPI.
 
 {{{
 $ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
