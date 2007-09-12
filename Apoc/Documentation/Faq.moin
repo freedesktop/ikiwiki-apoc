@@ -1,7 +1,7 @@
 = Frequently Asked Questions =
 [[TableOfContents()]]
 == What is APOC? ==
-APOC stands for A Point Of Control, it is a desktop class configuration profile editor, that allows you to define, store and assign profiles in an LDAP or file based configuration repository. These profiles may  subsequently be used on the desktop to complement applications configuration settings.
+APOC stands for A Point Of Control. It provides a framework for centralised storage of application and desktop configuration which may be applied to users, organisations and hosts.
 
 == What is it used for? ==
 It is used to reduce the administration time of large desktop deployments. You can edit user preferences and apply them into hundred of machines/users using just a web interface.
