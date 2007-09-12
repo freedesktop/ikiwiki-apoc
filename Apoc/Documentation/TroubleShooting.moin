@@ -159,7 +159,7 @@ To check if the APOC Manager is pointing to the proper LDAP server, check the co
 [[Anchor(DebugAPOCMgr)]]
 ==== Enabling Debug Log Level for the APOC Manager ====
 
-The current log level of the APOC Manager, which is actually the log level of the Web Console, can be checked by running `smreg list -p` and looking at the =debug.trace.level= property. To force the APOC Manager to generate more traces so that the source of problems can be investigated, this property must be changed by running `smreg add -p debug.trace.level=<log level>`, where <log level> is 3 for the maximum amount of traces.
+The current log level of the APOC Manager, which is actually the log level of the Web Console, can be checked by running `smreg list -p` and looking at the {{{debug.trace.level}}} property. To force the APOC Manager to generate more traces so that the source of problems can be investigated, this property must be changed by running `smreg add -p debug.trace.level=<log level>`, where <log level> is 3 for the maximum amount of traces.
 
 === APOC Agent ===
 
@@ -171,7 +171,7 @@ The tool `apoc-config` must be used and the checkbox labelled `Enable` must be c
 [[Anchor(ConfigureAPOCAgent)]]
 ==== Configuring the APOC Agent ====
 
-The configuration of the APOC agent is done either through this menu or directly by running the =apoc-config= tool. 
+The configuration of the APOC agent is done either through this menu or directly by running the {{{apoc-config}}} tool. 
 
 It is important that the details of the LDAP server, specifically the host name, port number and base DN accurately allow the agent to communicate with the server. One good way of ensuring this is by using the values in these tools to [#FindUser find a user] in the LDAP repository.
 
@@ -190,7 +190,7 @@ By default, the APOC agent checks for changes to the configuration of currently 
 [[Anchor(GConfAdapter)]]
 ==== Enabling APOC in GConf ====
 
-To check whether APOC is enabled in GConf, verify that the file `path` located in `/etc/gconf/2` contains lines like `apoc:readonly:mandatory@` and `apoc:readonly` and that these lines are not commented out. The fact that a proper session with the APOC agent has been established when a GConf daemon has started can be tested on Linux by looking in the file `messages` located in `/var/log` and looking for =gconfd= messages associated with the user.
+To check whether APOC is enabled in GConf, verify that the file `path` located in `/etc/gconf/2` contains lines like `apoc:readonly:mandatory@` and `apoc:readonly` and that these lines are not commented out. The fact that a proper session with the APOC agent has been established when a GConf daemon has started can be tested on Linux by looking in the file `messages` located in `/var/log` and looking for {{{gconfd}}} messages associated with the user.
 
 [[Anchor((UserPref)]]
 === Desktop User Preferences ===
@@ -209,7 +209,7 @@ __Please note that, until we have come to an agreement with the !SunRay team on 
 If the problem doesn't fit one of the above issues, or the tests and solutions offered failed to remedy it, contact [[http://lists.freedesktop.org/mailman/listinfo/apoc the mailing list]], providing a description of the problem and if possible root access to the machine affected by the problem (either the Web Console machine or a desktop one). If providing a root access is not possible, enable debug information on the appropriate machine (the [#DebugAPOCMgr Web Console] or the [#DebugAPOCAgent desktop]), recreate the problem and depending on the nature of the problem, gather and make available (by attaching to the mail or otherwise) the following information:
 
  * if everything seems to be started and running, but no access to the LDAP server, i.e login or data retrieval, can be achieved, get from the LDAP server:
-  * a copy of the log files located on a Sun Directory Server in `/var/Sun/mps/slapd-<instance>/logs` and named =access= and `errors`, making sure that the logs cover the time at which the problem occurred (these log files are rotated when they reach a certain size, the old files are named with timestamps indicated the period they cover).
+  * a copy of the log files located on a Sun Directory Server in `/var/Sun/mps/slapd-<instance>/logs` and named {{{access}}} and `errors`, making sure that the logs cover the time at which the problem occurred (these log files are rotated when they reach a certain size, the old files are named with timestamps indicated the period they cover).
   * the output of `ps -ef`.
   * if possible, an LDIF dump of the contents of the directory.
  * if the problem is happening in the APOC Manager, get from the Web Console machine:
@@ -221,7 +221,7 @@ If the problem doesn't fit one of the above issues, or the tests and solutions o
   * a copy of the file named `consoledebuglog` located in `/var/opt/webconsole`.
  * if the problem is happening on a desktop, get from the desktop machine:
   * the output of `ps -ef`.
-  * a copy of the file named `policymgr.properties` located in `/opt/apoc/lib` for JDS 2 or =/etc/apoc= for JDS 3.
+  * a copy of the file named `policymgr.properties` located in `/opt/apoc/lib` for JDS 2 or {{{/etc/apoc}}} for JDS 3.
   * a copy of the file named `apocd.log.0` located in `/var/opt/apoc/Logs`.
   * on Linux only, a copy of the file named `messages` located in `/var/log`.
   * for a RPM bassed Linux machine, the output of `rpm -qa | grep apoc`, for a Solaris one the output of `pkginfo | grep SUNWap`.
