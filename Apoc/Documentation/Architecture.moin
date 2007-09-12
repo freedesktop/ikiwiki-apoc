@@ -11,16 +11,16 @@ The SPI can interact with a variety of configuration data repositories. These in
 /!\ NOTE: Access to file based repositories was included largely for testing purposes.
 
 == The Desktop Agent, the Policy API and the Adapters ==
-The Desktop Agent is a daemon that runs on the client side. Its responsibility is to provide access to configuration data stored in the centralised repository. To do this effectively, it maintains a locally cached version of the relevant data. This cached data is retrieved using the SPI and is refreshed periodically. 
+The Desktop Agent is a daemon that runs on the client side. Its responsibility is to provide access to configuration data stored in the centralized repository. To do this effectively, it maintains a locally cached version of the relevant data. This cached data is retrieved using the SPI and is refreshed periodically. 
 
 
-||<tablewidth="100%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> attachment:adapters-diagram.png ||<style="float: top; align: top; border: 0px solid white;"> Access to the Agent and the configuration data that it maintinas is available via the Policy API (libapoc.so). Currently the Policy API is available only as a native ( C ) shared object. ||
+||<tablewidth="100%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> attachment:adapters-diagram.png ||<style="float: top; align: top; border: 0px solid white;"> Access to the Agent and the configuration data that it maintains is available via the Policy API (libapoc.so). Currently the Policy API is available only as a native ( C ) shared object. ||
 
-All the applications supported by APOC use a  pluggable backend architecture to allow access to new types of configuration repository. The APOC adapters provide the relevant backend imlementations needed to allow these applications use configuration data from an "APOC repository".
+All the applications supported by APOC use a  pluggable backend architecture to allow access to new types of configuration repository. The APOC adapters provide the relevant backend implementations needed to allow these applications use configuration data from an "APOC repository".
 
 == Desktop Manager ==
 
-The Desktop Manager is a web based administration tool supporting the creation and deployment of configurationprofiles. It provides a browsable view of the organisation herarchy into which configuration profiles are deployed. The SPI is used for all interaction with the relevant configuration repository. The Desktop Manager is a Java based web application intended for deployment into the Java Web Console.
+The Desktop Manager is a web based administration tool supporting the creation and deployment of configuration profiles. It provides a navigational view of the organization hierarchy into which configuration profiles are deployed. The SPI is used for all interaction with the relevant configuration repository. The Desktop Manager is a Java based web application intended for deployment into the Java Web Console.
 
 attachment:manager-diagram.png
 
