@@ -4,14 +4,15 @@
 APOC stands for A Point Of Control. It provides a framework for centralized storage of application and desktop configuration which may be applied to users, organizations and hosts.
 
 == What is it used for? ==
-It is used to reduce the administration time of large desktop deployments. You can edit user preferences and apply them into hundred of machines/users using just a web interface.
+
+It is used to reduce the administration overhead for large desktop deployments by supporting centralized management and availability of key configuration settings for the desktop and its applications.
 
 == How does it work? ==
 
 APOC has three main components.
  * A web application called the Desktop Manager allows the administrator to create and assign configuration profiles in a central repository.
- * The Desktop Manager is a daemon is responsible for retrieving these profiles and their assignments, and keeping them up to date in a local database on the application host.
- * For each supported desktop application, an APOC adapter is responsible for retreiving relevant APOC configuration data and merging it with the application's local configuration settings.
+ * The Desktop Agent is a daemon is responsible for retrieving these profiles and their assignments, and keeping them up to date in a local database on the application host.
+ * For each supported desktop application, an APOC adapter is responsible for retrieving relevant APOC configuration data and merging it with the application configuration.
 
 == What is a profile? ==
 
@@ -22,7 +23,7 @@ Configuration profiles define logically releated sets of configuration for suppo
 Each of the supported desktop applications uses its own configuration adapter to query the Desktop Agent for its configuration data. The adapters must be installed on every client that you want to manage centrally.
 
 == How does APOC store configuration? ==
-A master copy of all APOC configuration data is stored and maintained by the Desktop Manager in a centralised configuration datastore (LDAP or file based). On each desktop machine, the APOC agent maintains a cache of needed configuration data for use by desktop applications. In both cases, the APOC SPI is used to do the actual storage and retrieval of configuration data. The LDAP servers currently tested are:
+A master copy of all APOC configuration data is stored and maintained by the Desktop Manager in a centralized configuration data store (LDAP or file based). On each desktop machine, the APOC agent maintains a cache of needed configuration data for use by desktop applications. In both cases, the APOC SPI is used to do the actual storage and retrieval of configuration data. APOC supports the LDAPv3 protocol, the LDAP servers currently tested are:
 
  * Sun Java System Directory Server Enterprise Edition
  * OpenLDAP
@@ -42,4 +43,7 @@ Other application adapters (such as for OpenOffice.org) might be released in the
 It is mostly developed in Java. However the adapters are developed in the main language of each application (C for the GConf adapter, C++ for Firefox).
 
 == Which operating systems are supported by APOC? ==
-APOC has been tested on Solaris and Linux. However, the desing allows to port it easily to other UNIX environments.
+APOC has been tested on:
+ * Solaris10 and 11/06 (both SPARC and x86).
+ * SuSE Linux Enterprise Server 9 at the Service Pack 3 level or later.
+ * RedHat Enterprise Linux Advanced Server (RHEL AS) 4 Update 3.
