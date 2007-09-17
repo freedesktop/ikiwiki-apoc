@@ -21,7 +21,7 @@ $ ./autogen.sh --help
 If no errors occur, the configure script will be generated successfully and its help output would be shown.
 
 === Step 2: Calling the configure script ===
-In the root path of the source code, you should execute the configure script. If you want information on how to change the default paths look at the help executing it with the --help output.
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option.
 
 {{{
 $ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
@@ -54,7 +54,7 @@ $ ./autogen.sh --help
 }}}
 
 === Step 2: Calling the configure script ===
-In the root path of the source code, you should execute the configure script.For more information on changing the default paths, execute configure with the --help option. 
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
 {{{
 $ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
@@ -72,7 +72,7 @@ $ make install
 
 === Post Installation ===
 
-To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF databse should be updated manually.
+To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF database should be updated manually.
 
 /!\ '''TBA''': Link to the agent configuration instructions.
 
@@ -93,7 +93,7 @@ $ ./autogen.sh --help
 If no errors occur, the configure script will be generated successfully and its help output would be shown.
 
 === Step 2: Calling the configure script ===
-In the root path of the source code, you should execute the configure script. If you want information on how to change the default paths look at the help executing it with the --help output.
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option.
 
 {{{
 $ ./configure --prefix=/usr
