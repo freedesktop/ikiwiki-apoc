@@ -50,7 +50,6 @@ The following steps should be completed in the {{{agent}}} sub directory of the 
 First, make sure you have installed the software listed in the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
 
 {{{
-$ cd agent
 $ ./autogen.sh --help
 }}}
 
@@ -88,7 +87,6 @@ The following steps should be completed in the {{{profile-editor}}} sub director
 Type this in the root path of the source code to generate the configure script:
 
 {{{
-$ cd profile-editor
 $ ./autogen.sh --help
 }}}
 
