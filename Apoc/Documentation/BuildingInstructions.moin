@@ -2,15 +2,15 @@
 
 [[TableOfContents(2)]]
 
-
 == Bootstrap ==
 
 You first need to install all the dependencies. They're listed in the [:Apoc/Documentation/Dependencies: dependencies section]. To get a better overall understanding of the source code read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
 
-
 == SPI ==
 
-=== Step 1: Generating the configure script (only for sources from git) ===
+=== Step 1: Generating the configure script ===
+
+/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
 Type this in the root path of the source code to generate the configure script:
 
@@ -44,6 +44,8 @@ Once complete, the SPI jar file, spi.jar should be available under your prefix d
 
 === Step 1: Generating the configure script ===
 
+/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
+
 First, make sure you have installed the software listed in the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
 
 {{{
@@ -76,7 +78,9 @@ To start the daemon the build generates an init.d script (initd/apocd) that shou
 
 == Profile Editor ==
 
-=== Step 1: Generating the configure script (only for sources from git) ===
+=== Step 1: Generating the configure script ===
+
+/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
 Type this in the root path of the source code to generate the configure script:
 
