@@ -24,3 +24,7 @@ attachment:edit_settings.png
 Once you have selected all the configuration settings, you can proceed to save the profile, click on the File->Save menu entry, you will be prompted for the file name and the location of the profile.
 
 attachment:saving_profile.png
+
+This will create a .zip file containing the profile data.
+
+== Applying the profile locally ==
