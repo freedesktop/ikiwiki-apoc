@@ -1,11 +1,9 @@
 =  Documentation  =
 ||<) tablewidth="80%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white; color: #254457; font-size: 12px; text-align: center;"style="border: 0px solid white;">[[ImageLink(http://apoc.freedesktop.org/images/faq.png, Apoc/Documentation/Faq)]]||<( style="border: 0px solid white;"> '''[:/Faq:Frequently Asked Questions]''' ||<) style="border: 0px solid white;"> [[ImageLink(http://apoc.freedesktop.org/images/troubleshooting.png, Apoc/Documentation/TroubleShooting)]] ||<( style="border: 0px solid white;"> '''[:/TroubleShooting:Trouble Shooting]'''||
 
- * [:/Architecture:Architectural overview]
+
+ * [:/Architecture:Understanding APOC Architecture]
  * [:/ProfileEditor:Profile Editor Manual]
-
-== Miscellaneous Resources ==
-
  * [:/BuildingInstructions:Build APOC from source]
  * [:/InstallingGit:How to install Git]
 
