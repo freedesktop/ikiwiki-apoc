@@ -41,7 +41,7 @@ Once complete, the SPI jar file, spi.jar should be available under your prefix d
 
 == Desktop Agent ==
 
-The following steps should be completed in the {{{agent}}} sub directory of the root path of the source code. 
+The following steps should be completed in the {{{agent}}} sub directory of the root path of the source code.
 
 === Step 1: Generating the configure script ===
 
@@ -76,9 +76,40 @@ To start the daemon the build generates an init.d script (initd/apocd) that shou
 
 /!\ '''TBA''': Link to the agent configuration instructions.
 
+== Template Packages ==
+
+The following steps should be completed in the {{{template-packages}}} sub directory of the root path of the source code.
+
+=== Step 1: Generating the configure script ===
+
+/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
+
+Type this in the root path of the source code to generate the configure script:
+
+{{{
+$ ./autogen.sh --help
+}}}
+
+If no errors occur, the configure script will be generated successfully and its help output would be shown.
+
+=== Step 2: Calling the configure script ===
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option.
+
+{{{
+$ ./configure --prefix=/usr
+}}}
+
+=== Step 3: Building the sources ===
+
+If the configuration ends successfully, then you should build and install the sources:
+{{{
+$ make install
+}}}
+
 == Profile Editor ==
 
 The following steps should be completed in the {{{profile-editor}}} sub directory of the root path of the source code. 
+The profile editor depends on the SPI and the Template Packages.
 
 === Step 1: Generating the configure script ===
 
