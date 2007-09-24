@@ -28,3 +28,16 @@ attachment:saving_profile.png
 This will create a .zip file containing the profile data.
 
 == Applying the profile locally ==
+
+On your client host, create the directory ${DataDir}/Policies/profiles/PROFILE_REPOSITORY_default, if it does not already exist. ${DataDir} corresponds to the value of the Desktop Agent's data directory which is /usr/local/var/apoc by default.
+
+Copy the previously created zip file to /usr/local/var/apoc/Policies/profiles/PROFILE_REPOSITORY_default.
+
+Ensure that the Configuration Agent is configured to apply available local policies. To do this, set the {{{ApplyLocalPolicy}}} variable to yes in the ${ConfigDir}{{{apocd.properties}}} file. ${ConfigDir} corresponds to the value of the Desktop Agent's configuration directory which is /usr/local/etc by default.
+
+Now restart the Desktop Agent running:
+{{{
+$ /usr/local/lib/apoc/apocd restart
+}}}
+
+Any local policy deployed in this manner will be made available to clients during the next Configuration Agent change detection cycle.
