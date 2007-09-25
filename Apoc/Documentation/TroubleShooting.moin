@@ -166,7 +166,18 @@ The current log level of the APOC Manager, which is actually the log level of th
 [[Anchor(EnableAPOCAgent)]]
 ==== Enabling the APOC Agent ====
 
-To be added.
+To enable the APOC Agent you need to configure the policymgr.properties file, here's an example of a basic anonymous configuration:
+{{{
+#-----------------------------#
+# Basic Configuration Example #
+#-----------------------------#
+
+#PROVIDER_URL = ldap://server1.freedesktop.org:389/o=mySuffixDn
+#AuthType=Anonymous
+#AuthDn=
+#Password=
+#ConnectTimeout=1
+}}}
 
 [[Anchor(ConfigureAPOCAgent)]]
 ==== Configuring the APOC Agent ====
