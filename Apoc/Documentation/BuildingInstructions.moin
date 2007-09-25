@@ -74,7 +74,7 @@ $ make install
 
 To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF database should be updated manually.
 
-/!\ '''TBA''': Link to the agent configuration instructions.
+Check the [http://apoc.freedesktop.org/wiki/Apoc/Documentation/TroubleShooting#EnableAPOCAgent troubleshooting page] to enable the Desktop Agent
 
 == Template Packages ==
 
