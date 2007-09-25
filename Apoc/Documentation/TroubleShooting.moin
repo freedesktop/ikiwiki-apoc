@@ -166,7 +166,7 @@ The current log level of the APOC Manager, which is actually the log level of th
 [[Anchor(EnableAPOCAgent)]]
 ==== Enabling the APOC Agent ====
 
-To enable the APOC Agent you need to configure the policymgr.properties file, here's an example of a basic anonymous configuration:
+To enable the APOC Agent you need to configure the policymgr.properties, file located in /usr/local/etc by default, here's an example of a basic anonymous configuration:
 {{{
 #-----------------------------#
 # Basic Configuration Example #
