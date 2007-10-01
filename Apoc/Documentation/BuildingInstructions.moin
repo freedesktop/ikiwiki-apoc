@@ -12,7 +12,7 @@ The following steps should be completed in the {{{spi}}} sub directory of the ro
 
 === Step 1: Generating the configure script ===
 
-/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
+/!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
 {{{
 $ ./autogen.sh --help
@@ -45,7 +45,7 @@ The following steps should be completed in the {{{agent}}} sub directory of the 
 
 === Step 1: Generating the configure script ===
 
-/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
+/!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
 First, make sure you have installed the software listed in the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
 
@@ -82,7 +82,7 @@ The following steps should be completed in the {{{template-packages}}} sub direc
 
 === Step 1: Generating the configure script ===
 
-/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
+/!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
 Type this in the root path of the source code to generate the configure script:
 
@@ -113,7 +113,7 @@ The profile editor depends on the SPI and the Template Packages.
 
 === Step 1: Generating the configure script ===
 
-/!\ '''Note''': Tarball releases already include a configure script so this step is unnecessary in that case.
+/!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
 Type this in the root path of the source code to generate the configure script:
 
