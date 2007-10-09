@@ -12,10 +12,13 @@ $ git clone git://anongit.freedesktop.org/git/apoc
 
 (!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:building APOC from source].
 
-== Getting the binaries ==
-There are no binary releases yet.
 === Release Tarballs ===
 ==== Stable releases ====
 There are no stable releases yet.
 ==== Unstable releases ====
 There are no unstable releases yet.
+
+== Getting the binaries ==
+=== GConf Adapter for Linux ==
+We provide a GConf adapter binary for Linux for testing purposes. Note that this binary is not provided for production use. The source code of the adapter will be available soon.
+  * http://apoc.freedesktop.org/images/package-small.png [http://apoc.freedesktop.org/downloads/linux/gconfbacked-bin.tar.bz2 GConf APOC Adapter for Linux].
