@@ -8,7 +8,7 @@ You first need to install all the dependencies. They're listed in the [:Apoc/Doc
 
 == SPI ==
 
-The following steps should be completed in the {{{spi}}} sub directory of the root path of the source code. 
+The following steps should be completed in the root directory of the apoc-spi local copy.
 
 === Step 1: Generating the configure script ===
 
@@ -41,7 +41,7 @@ Once complete, the SPI jar file, spi.jar should be available under your prefix d
 
 == Desktop Agent ==
 
-The following steps should be completed in the {{{agent}}} sub directory of the root path of the source code.
+The following steps should be completed in the root directory of the apoc-agent local copy.
 
 === Step 1: Generating the configure script ===
 
@@ -78,7 +78,7 @@ Check the [http://apoc.freedesktop.org/wiki/Apoc/Documentation/TroubleShooting#E
 
 == Template Packages ==
 
-The following steps should be completed in the {{{template-packages}}} sub directory of the root path of the source code.
+The following steps should be completed in the root directory of the apoc-agent local copy.
 
 === Step 1: Generating the configure script ===
 
@@ -108,7 +108,7 @@ $ make install
 
 == Profile Editor ==
 
-The following steps should be completed in the {{{profile-editor}}} sub directory of the root path of the source code. 
+The following steps should be completed in the root directory of the apoc-agent local copy.
 The profile editor depends on the SPI and the Template Packages.
 
 === Step 1: Generating the configure script ===
