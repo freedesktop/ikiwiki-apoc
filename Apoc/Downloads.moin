@@ -4,10 +4,13 @@
 
 APOC source code is stored in the [http://freedesktop.org freedesktop.org]'s Git repository, you can find more information about Git at the [http://git.or.cz/ official git site]. You can also browse the source code using the freedesktop.org [http://gitweb.freedesktop.org/ git web interface].
 
-You will need to use the Git client to download the APOC source repository. If you don't have git installed, please follow the [:Apoc/Documentation/InstallingGit:Git installation instructions] before proceedig. Once installed, run the following command to clone the APOC git repository to your current working directory.
+You will need to use the Git client to download the APOC source repository. If you don't have git installed, please follow the [:Apoc/Documentation/InstallingGit:Git installation instructions] before proceedig. Once installed, run the following command to clone each of the APOC source component's git repository to your current working directory.
 
 {{{
-$ git clone git://anongit.freedesktop.org/git/apoc
+$ git clone git://anongit.freedesktop.org/git/apoc-spi
+$ git clone git://anongit.freedesktop.org/git/apoc-agent
+$ git clone git://anongit.freedesktop.org/git/apoc-template-packages
+$ git clone git://anongit.freedesktop.org/git/apoc-profile-editor
 }}}
 
 (!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:building APOC from source].
