@@ -78,7 +78,7 @@ Check the [http://apoc.freedesktop.org/wiki/Apoc/Documentation/TroubleShooting#E
 
 == Template Packages ==
 
-The following steps should be completed in the root directory of the apoc-agent local copy.
+The following steps should be completed in the root directory of the apoc-template-packages local repository copy.
 
 === Step 1: Generating the configure script ===
 
@@ -108,7 +108,7 @@ $ make install
 
 == Profile Editor ==
 
-The following steps should be completed in the root directory of the apoc-agent local copy.
+The following steps should be completed in the root directory of the apoc-profile-editor local repository copy.
 The profile editor depends on the SPI and the Template Packages.
 
 === Step 1: Generating the configure script ===
