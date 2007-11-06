@@ -1,28 +1,37 @@
 = Getting Apoc =
 == Getting the source code ==
-=== Source repository ===
+=== Source repositories ===
 
-APOC source code is stored in the [http://freedesktop.org freedesktop.org]'s Git repository, you can find more information about Git at the [http://git.or.cz/ official git site]. You can also browse the source code using the freedesktop.org [http://gitweb.freedesktop.org/ git web interface].
+APOC source code is stored in the [http://freedesktop.org freedesktop.org]'s Git repositories, you can find more information about Git at the [http://git.or.cz/ official git site]. You can also browse the source code using the freedesktop.org [http://gitweb.freedesktop.org/ git web interface].
 
 You will need to use the Git client to download the APOC source repository. If you don't have git installed, please follow the [:Apoc/Documentation/InstallingGit:Git installation instructions] before proceedig. Once installed, run the following command to clone each of the APOC source component's git repository to your current working directory.
 
+==== APOC SPI ====
 {{{
 $ git clone git://anongit.freedesktop.org/git/apoc-spi
+}}}
+==== APOC Agent ====
+{{{
 $ git clone git://anongit.freedesktop.org/git/apoc-agent
+}}}
+==== APOC Template Packages ====
+{{{
 $ git clone git://anongit.freedesktop.org/git/apoc-template-packages
+}}}
+==== APOC Profile Editor ====
+{{{
 $ git clone git://anongit.freedesktop.org/git/apoc-profile-editor
 }}}
 
-(!) Once you have downloaded the source files, see [:Apoc/Documentation/BuildingInstructions:building APOC from source].
+=== Adapters ===
+==== APOC GConf Adapter ====
+The GConf adapter sourcecode is hosted in the GNOME Subversion repository:
+{{{
+$ svn co http://svn.gnome.org/svn/gconf-apoc
+}}}
 
 === Release Tarballs ===
 ==== Stable releases ====
 There are no stable releases yet.
 ==== Unstable releases ====
 There are no unstable releases yet.
-
-== Getting the binaries ==
-=== GConf Adapter for Linux ===
-We provide a GConf adapter binary for Linux for testing purposes. Note that this binary is not provided for production use. The source code of the adapter will be available soon.
-
-http://apoc.freedesktop.org/images/package-small.png [http://apoc.freedesktop.org/downloads/linux/gconfbacked-bin.tar.bz2 GConf APOC Adapter for Linux].
