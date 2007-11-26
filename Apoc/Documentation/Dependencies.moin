@@ -5,17 +5,22 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 = Dependencies =
 
 == SPI ==
- * [:Apoc/Downloads:Getting APOC source code].
- * Java SE JDK 1.4 or higher.
+ * [:Apoc/Downloads:Getting APOC source code]
+ * Java SE JDK 1.4 or higher
  * The autotools set (autoconf, automake and libtool).
  * Apache ANT http://ant.apache.org/
- * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java].
+ * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
 
 == Desktop Agent ==
- * The Apoc SPI and its dependencies.
+ * The Apoc SPI and its dependencies
  * Gnome's [http://xmlsoft.org/ libXML2]
- * Heimdal's Generic Security Services C implementation ([http://www.pdc.kth.se/heimdal/ gssapi]).
- * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled.
+ * Heimdal's Generic Security Services C implementation ([http://www.pdc.kth.se/heimdal/ gssapi])
+ * Oracle's (formerly Sleepycat's) [http://www.oracle.com/database/berkeley-db/db/index.html Berkeley DB libraries] with Java support enabled
+
+== Desktop Manager ==
+ * The Apoc SPI and its dependencies
+ * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
+ * [http://www.sun.com/download/products.xml?id=46cb72a9 Sun Java Web Console 3]
 
 = Ubuntu Instructions =
 
