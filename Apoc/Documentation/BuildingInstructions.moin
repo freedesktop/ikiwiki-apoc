@@ -43,6 +43,8 @@ Once complete, the SPI jar file, spi.jar should be available under your prefix d
 
 The following steps should be completed in the root directory of your apoc-agent local repository branch.
 
+Check [:Apoc/Documentation/Dependencies: the dependencies section] before to proceed.
+
 === Step 1: Generating the configure script ===
 
 /!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
@@ -110,6 +112,7 @@ $ make install
 == Profile Editor ==
 
 The following steps should be completed in the root directory of your apoc-profile-editor local repository branch.
+
 The profile editor depends on the SPI and the Template Packages.
 
 === Step 1: Generating the configure script ===
