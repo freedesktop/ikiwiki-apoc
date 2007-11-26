@@ -57,10 +57,11 @@ $ ./autogen.sh --help
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
 {{{
-$ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
+$ ./configure --prefix=/usr \
+              --with-bdb-path=/path/to/db.jar
 }}}
 
-/!\ '''NOTE''': You should use the same prefix than the SPI. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location.
+/!\ '''NOTE''': You should use the same prefix than the SPI, otherwise you need to set the --with-apoc-dir option. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location.
 
 === Step 3: Building the sources ===
 
@@ -139,6 +140,44 @@ If the configuration ends successfully, then you should build and install the so
 $ make
 $ make install
 }}}
+
+== Desktop Manager ==
+
+The following steps should be completed in the root directory of your apoc-manager local repository branch.
+The profile editor depends on the SPI, the Mozilla/Netscape LDAP JDK, and the [http://www.sun.com/download/products.xml?id=46cb72a9 Java Web Console].
+
+=== Step 1: Generating the configure script ===
+
+/!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
+
+Type this in the root path of the source code to generate the configure script:
+
+{{{
+$ ./autogen.sh --help
+}}}
+
+If no errors occur, the configure script will be generated successfully and its help output would be shown.
+
+=== Step 2: Calling the configure script ===
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option.
+
+{{{
+$ ./configure --prefix=/usr \
+              --with-webconsole-prefix=/opt/sun/webconsole \
+              --with-jato-path=/opt/sun/share/lib/jato.jar \
+              --with-ns-ldap-path=/usr/share/lib/java/ldapjdk.jar
+}}}
+
+/!\ '''NOTE''': You should use the same prefix than the SPI, otherwise you need to set the --with-apoc-dir option.
+
+=== Step 3: Building the sources ===
+
+If the configuration ends successfully, then you should build and install the sources:
+{{{
+$ make
+$ make install
+}}}
+
 = Build the adapters =
 
 == GConf Adapter ==
