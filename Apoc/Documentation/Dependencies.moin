@@ -5,9 +5,8 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 = Dependencies =
 
 == SPI ==
- * [:Apoc/Downloads:Getting APOC source code]
  * Java SE JDK 1.4 or higher
- * The autotools set (autoconf, automake and libtool).
+ * The autotools set (autoconf, automake and libtool)
  * Apache ANT http://ant.apache.org/
  * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
 
