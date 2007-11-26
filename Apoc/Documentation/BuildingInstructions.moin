@@ -182,7 +182,7 @@ $ make
 $ make install
 }}}
 
-=== Step4: Post installation ===
+=== Step 4: Post installation ===
 After installation, you should copy or make symbolic link from some files of the Java Web Console repository, the following example assumes that the webconsole is installed under /opt/sun/webconsole:
 
 {{{
