@@ -193,6 +193,12 @@ $ ln -s /opt/sun/webconsole/private/import/help com_sun_web_ui/
 $ ln -s /opt/sun/webconsole/private/import/jsp com_sun_web_ui/
 }}}
 
+Finally, you need to install the APOC Template Packages on the apoc/packages directory, if you have them installed already somewhere else, a symbolink link will work here as well:
+
+{{{
+$ ln -s /usr/share/apoc/packages /opt/sun/webconsole/apoc/packages
+}}}
+
 = Build the adapters =
 
 == GConf Adapter ==
