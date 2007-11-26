@@ -144,7 +144,8 @@ $ make install
 == Desktop Manager ==
 
 The following steps should be completed in the root directory of your apoc-manager local repository branch.
-The profile editor depends on the SPI, the Mozilla/Netscape LDAP JDK, and the [http://www.sun.com/download/products.xml?id=46cb72a9 Java Web Console].
+
+Check [:Apoc/Documentation/Dependencies: the dependencies section] before to proceed.
 
 === Step 1: Generating the configure script ===
 
