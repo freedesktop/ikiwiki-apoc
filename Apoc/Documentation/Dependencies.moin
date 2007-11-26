@@ -20,7 +20,7 @@ Here you can find a comprehensive list of dependencies and instructions on how t
 == Desktop Manager ==
  * The Apoc SPI and its dependencies
  * [http://www.mozilla.org/directory/javasdk.html Mozilla (former Netscape's) Directory SDK for Java]
- * [http://www.sun.com/download/products.xml?id=46cb72a9 Sun Java Web Console 3]
+ * [http://www.sun.com/download/products.xml?id=46cb72a9 Sun Java Web Console 3] and its dependencies
 
 = Ubuntu Instructions =
 
