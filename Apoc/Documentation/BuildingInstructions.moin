@@ -199,6 +199,11 @@ Finally, you need to install the APOC Template Packages on the apoc/packages dir
 $ ln -s /usr/share/apoc/packages /opt/sun/webconsole/apoc/packages
 }}}
 
+Finally you will have to deploy your app on the Java Web Console using the wcadmin command as root:
+{{{
+$ wcadmin -a apoc -x apoc /opt/sun/webconsole/apoc
+}}}
+
 = Build the adapters =
 
 == GConf Adapter ==
