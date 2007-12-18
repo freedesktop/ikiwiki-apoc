@@ -43,7 +43,7 @@ $ git clone git://anongit.freedesktop.org/git/apoc-manager
 
 === Adapters ===
 [[Anchor(GConfAdapter)]]
-==== GConf Adapters ====
+==== GConf Adapter ====
 The source code of the GConf APOC adapter is hosted in the GNOME subversion repository, run the following command to checkout the code:
 {{{
 $ svn co http://svn.gnome.org/svn/gconf-apoc/trunk gconf-apoc
