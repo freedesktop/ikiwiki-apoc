@@ -1,6 +1,6 @@
 = The Profile Editor =
 
-[[TableOfContents(2)]]
+<<TableOfContents(2)>>
 
 == Overview ==
 The Profile Editor is a Java based UI application that allows you to create profiles for the templates packages available on the system. It uses the template packages to know about which applications and configuration keys are available.
@@ -9,7 +9,7 @@ The Profile Editor is a Java based UI application that allows you to create prof
 
 To properly use the editor you need to have at least one template package installed on your system, each package contains the list of configuration keys and possible values for one application. The Profile Editor uses this keys to build the user interfaces that will allow the user to select values for each of those configuration keys. The first time you run the editor, it will try to find the template packages directory, if it's unable to find it on any of the default paths, it will prompt the user for it to import them properly.
 
-attachment:package_directory.png
+{{attachment:package_directory.png}}
 
 After importing the template packages, you will be able to select the list of applications available on the ''Configuration Settings'' tab.
 
@@ -17,13 +17,13 @@ After importing the template packages, you will be able to select the list of ap
 
 To create a profile click on the File->New menu entry, then, you should select a name for the new profile on the {{{General Properties}}} tab. If the template packages were loaded succesfully you should be able to see all the settings available on the {{{Configuration Settings}}} tab. Select the values for each setting that you want to include on the profile.
 
-attachment:edit_settings.png
+{{attachment:edit_settings.png}}
 
 == Saving the Profile ==
 
 Once you have selected all the configuration settings, you can proceed to save the profile, click on the File->Save menu entry, you will be prompted for the file name and the location of the profile.
 
-attachment:saving_profile.png
+{{attachment:saving_profile.png}}
 
 This will create a .zip file containing the profile data.
 
