@@ -1,5 +1,5 @@
 = Frequently Asked Questions =
-[[TableOfContents()]]
+<<TableOfContents>>
 == What is APOC? ==
 APOC stands for A Point Of Control. It provides a framework for centralized storage of application and desktop configuration which may be applied to users, organizations and hosts.
 
