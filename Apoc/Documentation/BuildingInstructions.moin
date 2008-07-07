@@ -1,10 +1,10 @@
 = Build APOC =
 
-[[TableOfContents(2)]]
+<<TableOfContents(2)>>
 
 == Bootstrap ==
 
-You first need to install all the dependencies. They're listed in the [:Apoc/Documentation/Dependencies: dependencies section]. To get a better overall understanding of the source code read the [:Apoc/Documentation/Architecture: architectural overview] and the [http://docs.sun.com/app/docs/doc/819-2728 developer documentation].
+You first need to install all the dependencies. They're listed in the [[Apoc/Documentation/Dependencies| dependencies section]]. To get a better overall understanding of the source code read the [[Apoc/Documentation/Architecture| architectural overview]] and the [[http://docs.sun.com/app/docs/doc/819-2728|developer documentation]].
 
 == SPI ==
 
@@ -43,13 +43,13 @@ Once complete, the SPI jar file, spi.jar should be available under your prefix d
 
 The following steps should be completed in the root directory of your apoc-agent local repository branch.
 
-Check [:Apoc/Documentation/Dependencies: the dependencies section] before to proceed.
+Check [[Apoc/Documentation/Dependencies| the dependencies section]] before to proceed.
 
 === Step 1: Generating the configure script ===
 
 /!\ '''NOTE''': Tarball releases already include a configure script so this step is unnecessary in that case.
 
-First, make sure you have installed the software listed in the [:Apoc/Dependencies:dependencies section], type this to generate the configure script:
+First, make sure you have installed the software listed in the [[Apoc/Dependencies|dependencies section]], type this to generate the configure script:
 
 {{{
 $ ./autogen.sh --help
@@ -77,7 +77,7 @@ $ make install
 
 To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF database should be updated manually.
 
-Check the [http://apoc.freedesktop.org/wiki/Apoc/Documentation/TroubleShooting#EnableAPOCAgent troubleshooting page] to enable the Desktop Agent
+Check the [[http://apoc.freedesktop.org/wiki/Apoc/Documentation/TroubleShooting#EnableAPOCAgent|troubleshooting page]] to enable the Desktop Agent
 
 == Template Packages ==
 
@@ -148,7 +148,7 @@ $ make install
 
 The following steps should be completed in the root directory of your apoc-manager local repository branch.
 
-Check [:Apoc/Documentation/Dependencies: the dependencies section] before to proceed.
+Check [[Apoc/Documentation/Dependencies| the dependencies section]] before to proceed.
 
 === Step 1: Generating the configure script ===
 
