@@ -1,10 +1,10 @@
 = Architectural Overview =
-[[TableOfContents()]]
+<<TableOfContents>>
 
 == SPI: Service Provider Interface ==
 The SPI (Service Provider Interface) defines an abstraction layer between the core APOC components, such as the Desktop Agent and the Desktop Manager, and a pluggable configuration backend. It supports navigation and search for entities (organizations, users, roles, domains and hosts) within a given organization structure. It also provides an interface for assigning, retrieving and editing of configuration data (profiles) for the various entity types and supports merging of different profiles into a resulting configuration set for a specific host/user combination.
 
-attachment:spi-diagram.png
+{{attachment:spi-diagram.png}}
 
 The SPI can interact with a variety of configuration data repositories. These include any LDAPv3 compilant server and any file based repository accessible via file, http or https url.
 
@@ -14,7 +14,7 @@ The SPI can interact with a variety of configuration data repositories. These in
 The Desktop Agent is a daemon that runs on the client side. Its responsibility is to provide access to configuration data stored in the centralized repository. To do this effectively, it maintains a locally cached version of the relevant data. This cached data is retrieved using the SPI and is refreshed periodically. 
 
 
-||<tablewidth="100%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> attachment:adapters-diagram.png ||<style="float: top; align: top; border: 0px solid white;"> Access to the Agent and the configuration data that it maintains is available via the Policy API (libapoc.so). Currently the Policy API is available only as a native ( C ) shared object. ||
+||<tablewidth="100%" tablealign="" tablestyle="padding: 0px; margin: 0px;border: 0px solid white;" style="border: 0px solid white;"> {{attachment:adapters-diagram.png}} ||<style="float: top; align: top; border: 0px solid white;"> Access to the Agent and the configuration data that it maintains is available via the Policy API (libapoc.so). Currently the Policy API is available only as a native ( C ) shared object. ||
 
 All the applications supported by APOC use a  pluggable backend architecture to allow access to new types of configuration repository. The APOC adapters provide the relevant backend implementations needed to allow these applications use configuration data from an "APOC repository".
 
@@ -22,6 +22,6 @@ All the applications supported by APOC use a  pluggable backend architecture to 
 
 The Desktop Manager is a web based administration tool supporting the creation and deployment of configuration profiles. It provides a navigational view of the organization hierarchy into which configuration profiles are deployed. The SPI is used for all interaction with the relevant configuration repository. The Desktop Manager is a Java based web application intended for deployment into the Java Web Console.
 
-attachment:manager-diagram.png
+{{attachment:manager-diagram.png}}
 
 A set of templates is used to identify available applications, their configuration keys and their visual representation in the Desktop Manager.
