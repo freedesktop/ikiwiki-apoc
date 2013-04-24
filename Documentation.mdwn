@@ -15,7 +15,7 @@
 
 ## Sun Desktop Manager Documentation
 
-* [[About Sun Desktop Manager and Apoc|Apoc/About]] 
+* [[About Sun Desktop Manager and Apoc|About]] 
 * [[Sun Desktop Manager Administration Guide|http://docs.sun.com/app/docs/doc/819-2726]] 
 * [[Sun Desktop Manager Developer Guide|http://docs.sun.com/app/docs/doc/819-2728]] 
 * [[BigAdmin Article|http://www.sun.com/bigadmin/features/articles/desktop_mgmt.html]] 
