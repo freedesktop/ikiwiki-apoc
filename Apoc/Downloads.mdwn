@@ -17,7 +17,7 @@ There are no tarball releases yet.
 
 APOC source code is stored in the [[freedesktop.org|http://freedesktop.org]]'s Git repository, you can find more information about Git at the [[official git site|http://git.or.cz/]]. You can also browse the source code using the freedesktop.org [[git web interface|http://gitweb.freedesktop.org/]]. 
 
-You will need to use the Git client to download the APOC source repository. If you don't have git installed, please follow the [[Git installation instructions|Apoc/Documentation/InstallingGit]] before proceedig. Once installed, run the following command to clone each of the APOC source component's git repository to your current working directory to create your local branch of the code. 
+You will need to use the Git client to download the APOC source repository. If you don't have git installed, please follow the [[Git installation instructions|Documentation/InstallingGit]] before proceedig. Once installed, run the following command to clone each of the APOC source component's git repository to your current working directory to create your local branch of the code. 
 
 
 #### SPI
