@@ -1,12 +1,4 @@
-
-
-# Getting Apoc
-
-[[!toc ]] 
-
-
 ## Getting the source code
-
 
 ### Release Tarballs
 
