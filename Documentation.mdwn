@@ -2,7 +2,7 @@
 
 # Documentation
 [[!table header="no" class="mointable" data="""
-[[[[!img Apoc/Documentation/Faq]|Apoc/Documentation/Faq]] |  **[[Frequently Asked Questions|Apoc/Documentation/Faq]]**  |  [[[[!img Apoc/Documentation/TroubleShooting]|Apoc/Documentation/TroubleShooting]]  |  **[[Trouble Shooting|Apoc/Documentation/TroubleShooting]]**
+[[[[!img Apoc/Documentation/Faq]|Apoc/Documentation/Faq]] |  **[[Frequently Asked Questions|Documentation/Faq]]**  |  [[[[!img Apoc/Documentation/TroubleShooting]|Apoc/Documentation/TroubleShooting]]  |  **[[Trouble Shooting|Apoc/Documentation/TroubleShooting]]**
 """]]
 
 * [[Understanding the APOC Architecture|Apoc/Documentation/Architecture]] 
