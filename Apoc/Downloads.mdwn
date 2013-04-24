@@ -1,0 +1,83 @@
+
+
+# Getting Apoc
+
+[[!toc ]] 
+
+
+## Getting the source code
+
+
+### Release Tarballs
+
+There are no tarball releases yet. 
+
+
+### Source repository
+
+APOC source code is stored in the [[freedesktop.org|http://freedesktop.org]]'s Git repository, you can find more information about Git at the [[official git site|http://git.or.cz/]]. You can also browse the source code using the freedesktop.org [[git web interface|http://gitweb.freedesktop.org/]]. 
+
+You will need to use the Git client to download the APOC source repository. If you don't have git installed, please follow the [[Git installation instructions|Apoc/Documentation/InstallingGit]] before proceedig. Once installed, run the following command to clone each of the APOC source component's git repository to your current working directory to create your local branch of the code. 
+
+
+#### SPI
+
+[[Browse the code|http://gitweb.freedesktop.org/?p=apoc-spi.git;a=tree]] or retrieve the git repository: 
+[[!format txt """
+$ git clone git://anongit.freedesktop.org/git/apoc-spi
+"""]]
+
+#### Agent
+
+[[Browse the code|http://gitweb.freedesktop.org/?p=apoc-agent.git;a=tree]] or retrieve the git repository: 
+[[!format txt """
+$ git clone git://anongit.freedesktop.org/git/apoc-agent
+"""]]
+
+#### Template Pacakges
+
+[[Browse the code|http://gitweb.freedesktop.org/?p=apoc-template-packages.git;a=tree]] or retrieve the git repository: 
+[[!format txt """
+$ git clone git://anongit.freedesktop.org/git/apoc-template-packages
+"""]]
+
+#### Profile Editor
+
+[[Browse the code|http://gitweb.freedesktop.org/?p=apoc-profile-editor.git;a=tree]] or retrieve the git repository: 
+[[!format txt """
+$ git clone git://anongit.freedesktop.org/git/apoc-profile-editor
+"""]]
+
+#### Manager
+
+[[Browse the code|http://gitweb.freedesktop.org/?p=apoc-manager.git;a=tree]] or retrieve the git repository: 
+[[!format txt """
+$ git clone git://anongit.freedesktop.org/git/apoc-manager
+"""]]
+(!) Once you have downloaded the source files, see [[building APOC from source|Apoc/Documentation/BuildingInstructions]]. 
+
+
+### Adapters
+
+<a name="GConfAdapter"></a> 
+#### GConf Adapter
+
+The source code of the GConf APOC adapter is hosted in the GNOME subversion repository, run the following command to checkout the code: 
+[[!format txt """
+$ svn co http://svn.gnome.org/svn/gconf-apoc/trunk gconf-apoc
+"""]]
+
+### Templates
+
+
+#### Firefox
+
+* [[Firefox 1.5 template package|http://apoc.freedesktop.org/downloads/templates/firefox_template_package1.5-0.tar.gz]]. 
+
+#### Gnome
+
+* [[GNOME 2.6 template package|http://apoc.freedesktop.org/downloads/templates/gnome_template_package2.6-0.tar.gz]]. 
+
+#### Evolution
+
+* [[Evolution 1.4 template package|http://apoc.freedesktop.org/downloads/templates/evolution_template_package1.4-0.tar.gz]]. 

@@ -1,0 +1,21 @@
+
+
+# Documentation
+[[!table header="no" class="mointable" data="""
+[[[[!img Apoc/Documentation/Faq]|Apoc/Documentation/Faq]] |  **[[Frequently Asked Questions|Apoc/Documentation/Faq]]**  |  [[[[!img Apoc/Documentation/TroubleShooting]|Apoc/Documentation/TroubleShooting]]  |  **[[Trouble Shooting|Apoc/Documentation/TroubleShooting]]**
+"""]]
+
+* [[Understanding the APOC Architecture|Apoc/Documentation/Architecture]] 
+* [[Profile Editor Manual|Apoc/Documentation/ProfileEditor]] 
+
+## Miscelaneous Documents
+
+* [[Build APOC from source|Apoc/Documentation/BuildingInstructions]] 
+* [[How to install Git|Apoc/Documentation/InstallingGit]] 
+
+## Sun Desktop Manager Documentation
+
+* [[About Sun Desktop Manager and Apoc|Apoc/About]] 
+* [[Sun Desktop Manager Administration Guide|http://docs.sun.com/app/docs/doc/819-2726]] 
+* [[Sun Desktop Manager Developer Guide|http://docs.sun.com/app/docs/doc/819-2728]] 
+* [[BigAdmin Article|http://www.sun.com/bigadmin/features/articles/desktop_mgmt.html]] 

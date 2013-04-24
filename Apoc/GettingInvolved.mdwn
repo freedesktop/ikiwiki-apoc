@@ -1,0 +1,30 @@
+
+
+# Get Involved
+
+
+## IRC
+
+You can find us at the #apoc channel on irc.freenode.net. 
+
+
+## Mailing list
+
+For general discussion, get subscribed to the [[apoc mailing list|http://lists.freedesktop.org/mailman/listinfo/apoc]]. 
+
+You can also browse the [[mailing list archives|http://lists.freedesktop.org/archives/apoc/]] to read about previous topics. 
+
+
+## Bugs!
+
+Please, feel free to report bugs and patches to our [[bugzilla|https://bugs.freedesktop.org/]] component. 
+
+
+## Git repository
+
+You can browse the source code in the freedesktop.org [[git web interface|http://gitweb.freedesktop.org/]]. 
+
+
+## Contributions
+
+If you are interested in contributing to the project with code or documentation, we encourage you to read the [[contributor's guide|Apoc/GettingInvolved/ContributionsGuide]]. 

@@ -1,0 +1,265 @@
+
+
+# Build APOC
+
+[[!toc 2]] 
+
+
+## Bootstrap
+
+You first need to install all the dependencies. They're listed in the [[dependencies section|Apoc/Documentation/Dependencies]]. To get a better overall understanding of the source code read the [[architectural overview|Apoc/Documentation/Architecture]] and the [[developer documentation|http://docs.sun.com/app/docs/doc/819-2728]]. 
+
+
+## SPI
+
+The following steps should be completed in the root directory of your apoc-spi local repository branch. 
+
+
+### Step 1: Generating the configure script
+
+/!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
+
+
+[[!format txt """
+$ ./autogen.sh --help
+"""]]
+If no errors occur, the configure script will be generated successfully and its help output would be shown. 
+
+
+### Step 2: Calling the configure script
+
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
+
+
+[[!format txt """
+$ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
+"""]]
+/!\ **NOTE**: We assume here that java, javac and ant are in the binary path. The ldapjdk.jar would be looked by default on /usr/share/lib/apoc/ldapjdk.jar, it can be located elsewhere, use the --with-ns-ldap-path option used in the example for any other location. 
+
+
+### Step 3: Building the sources
+
+If the configuration ends successfully, then you should build and install the sources: 
+[[!format txt """
+$ make
+$ make install
+"""]]
+Once complete, the SPI jar file, spi.jar should be available under your prefix directory as share/lib/apoc/spi.jar. 
+
+
+## Desktop Agent
+
+The following steps should be completed in the root directory of your apoc-agent local repository branch. 
+
+Check [[the dependencies section|Apoc/Documentation/Dependencies]] before to proceed. 
+
+
+### Step 1: Generating the configure script
+
+/!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
+
+First, make sure you have installed the software listed in the [[dependencies section|Apoc/Dependencies]], type this to generate the configure script: 
+
+
+[[!format txt """
+$ ./autogen.sh --help
+"""]]
+
+### Step 2: Calling the configure script
+
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option.  
+
+
+[[!format txt """
+$ ./configure --prefix=/usr \
+              --with-bdb-path=/path/to/db.jar
+"""]]
+/!\ **NOTE**: You should use the same prefix than the SPI, otherwise you need to set the --with-apoc-dir option. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location. 
+
+
+### Step 3: Building the sources
+
+If the configuration ends successfully, then you should build and install the sources: 
+[[!format txt """
+$ make
+$ make install
+"""]]
+
+### Post Installation
+
+To start the daemon the build generates an init.d script (initd/apocd) that should be installed manually. An SMF manifest for SOLARIS is generated and installed under the prefix directory as svc/manifest/network/apocd.xml, the SMF database should be updated manually. 
+
+Check the [[troubleshooting page|http://apoc.freedesktop.org/wiki/Apoc/Documentation/TroubleShooting#EnableAPOCAgent]] to enable the Desktop Agent 
+
+
+## Template Packages
+
+The following steps should be completed in the root directory of your apoc-template-packages local repository branch. 
+
+
+### Step 1: Generating the configure script
+
+/!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
+
+Type this in the root path of the source code to generate the configure script: 
+
+
+[[!format txt """
+$ ./autogen.sh --help
+"""]]
+If no errors occur, the configure script will be generated successfully and its help output would be shown. 
+
+
+### Step 2: Calling the configure script
+
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
+
+
+[[!format txt """
+$ ./configure --prefix=/usr
+"""]]
+
+### Step 3: Building the sources
+
+If the configuration ends successfully, then you should build and install the sources: 
+[[!format txt """
+$ make install
+"""]]
+
+## Profile Editor
+
+The following steps should be completed in the root directory of your apoc-profile-editor local repository branch. 
+
+The profile editor depends on the SPI and the Template Packages. 
+
+
+### Step 1: Generating the configure script
+
+/!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
+
+Type this in the root path of the source code to generate the configure script: 
+
+
+[[!format txt """
+$ ./autogen.sh --help
+"""]]
+If no errors occur, the configure script will be generated successfully and its help output would be shown. 
+
+
+### Step 2: Calling the configure script
+
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
+
+
+[[!format txt """
+$ ./configure --prefix=/usr
+"""]]
+/!\ **NOTE**: You should use the same prefix than the SPI. 
+
+
+### Step 3: Building the sources
+
+If the configuration ends successfully, then you should build and install the sources: 
+[[!format txt """
+$ make
+$ make install
+"""]]
+
+## Desktop Manager
+
+The following steps should be completed in the root directory of your apoc-manager local repository branch. 
+
+Check [[the dependencies section|Apoc/Documentation/Dependencies]] before to proceed. 
+
+
+### Step 1: Generating the configure script
+
+/!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
+
+Type this in the root path of the source code to generate the configure script: 
+
+
+[[!format txt """
+$ ./autogen.sh --help
+"""]]
+If no errors occur, the configure script will be generated successfully and its help output would be shown. 
+
+
+### Step 2: Calling the configure script
+
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
+
+
+[[!format txt """
+$ ./configure --prefix=/usr \
+              --with-webconsole-prefix=/opt/sun/webconsole \
+              --with-jato-path=/opt/sun/share/lib/jato.jar \
+              --with-ns-ldap-path=/usr/share/lib/java/ldapjdk.jar
+"""]]
+/!\ **NOTE**: You should use the same prefix than the SPI, otherwise you need to set the --with-apoc-dir option. 
+
+
+### Step 3: Building the sources
+
+If the configuration ends successfully, then you should build and install the sources: 
+[[!format txt """
+$ make
+$ make install
+"""]]
+
+### Step 4: Post installation
+
+After installation, you should copy or make symbolic link from some files of the Java Web Console repository, the following example assumes that the webconsole is installed under /opt/sun/webconsole: 
+
+
+[[!format txt """
+$ cd /opt/sun/webconsole/apoc
+$ ln -s /opt/sun/webconsole/private/import/tld WEB-INF/
+$ ln -s /opt/sun/webconsole/private/import/lib/registrationservlet.jar WEB-INF/lib/
+$ ln -s /opt/sun/webconsole/private/import/help com_sun_web_ui/
+$ ln -s /opt/sun/webconsole/private/import/jsp com_sun_web_ui/
+"""]]
+Finally, you need to install the APOC Template Packages on the apoc/packages directory, if you have them installed already somewhere else, a symbolink link will work here as well: 
+
+
+[[!format txt """
+$ ln -s /usr/share/apoc/packages /opt/sun/webconsole/apoc/packages
+"""]]
+Finally you will have to deploy your app on the Java Web Console using the wcadmin command as root: 
+[[!format txt """
+$ wcadmin -a apoc -x apoc /opt/sun/webconsole/apoc
+"""]]
+
+# Build the adapters
+
+
+## GConf Adapter
+
+
+### Step 1: Generating the configure script
+
+/!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
+
+
+[[!format txt """
+$ ./autogen.sh --help
+"""]]
+If no errors occur, the configure script will be generated successfully and its help output would be shown. 
+
+
+### Step 2: Calling the configure script
+
+In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
+
+
+[[!format txt """
+$ ./configure --prefix=/usr
+"""]]
+
+### Step 3: Building the sources
+
+If the configuration ends successfully, then you should build and install the sources: 
+[[!format txt """
+$ make
+$ make install
+"""]]

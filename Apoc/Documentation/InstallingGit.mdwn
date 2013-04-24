@@ -1,0 +1,43 @@
+
+
+# Installing Git
+
+Git is a distributed control management software used by the [[freedesktop.org|http://www.freedesktop.org]] to host its projects. To get the latest code available for the latest version or other code branches of APOC you need to use a Git client. You can see more instructions on how to get the latest APOC source code on the [[download section|Apoc/Downloads]]. 
+
+[[!toc ]] 
+## Git on Ubuntu/Debian
+
+Look for the package git-core on the Synaptic package management tool, or typing this: 
+[[!format txt """
+$ sudo apt-get install git-core
+"""]]
+
+## Git on Fedora
+
+Type this as root: 
+[[!format txt """
+# yum install git-core
+"""]]
+
+## Git on Solaris
+
+Git for Solaris is available as a set of binary packages built from the [[Spec Files Extra|http://pkgbuild.sourceforge.net]] repository (thanks to Laszlo Peter for helping out on building the binary packages). To install it download the packages for your Solaris version and architecture and follow the instructions below: 
+[[!table header="no" class="mointable" data="""
+ **Solaris ONNV** (Nevada)/x86  |  **Solaris ONNV** (Nevada)/SPARC  |  **Solaris 10**/x86 
+ [[!img http://apoc.freedesktop.org/images/package-small.png] [[Curl 7.16.2|http://apoc.freedesktop.org/downloads/solaris/SFEcurl-7.16.2-nevada-x86.pkg]]  |  [[!img http://apoc.freedesktop.org/images/package-small.png] [[Curl 7.16.2|http://apoc.freedesktop.org/downloads/solaris/SFEcurl-7.16.2-nevada-sparc.pkg]]  |  [[!img http://apoc.freedesktop.org/images/package-small.png] [[Curl 7.16.2|http://apoc.freedesktop.org/downloads/solaris/SFEcurl-7.16.2-solaris10-x86.pkg]] 
+[[!img http://apoc.freedesktop.org/images/package-small.png] [[Git 1.5.2.2|http://apoc.freedesktop.org/downloads/solaris/SFEgit-1.5.2.2-nevada-x86.pkg]]  |  [[!img http://apoc.freedesktop.org/images/package-small.png] [[Git 1.5.2.2|http://apoc.freedesktop.org/downloads/solaris/SFEgit-1.5.2.2-nevada-sparc.pkg]]  |  [[!img http://apoc.freedesktop.org/images/package-small.png] [[Git 1.5.2.2|http://apoc.freedesktop.org/downloads/solaris/SFEgit-1.5.2.2-solaris10-x86.pkg]] 
+"""]]
+
+Download the packages and execute as root: 
+
+
+[[!format txt """
+# pkgadd -d SFEcurl-7.16.2-<os>-<platform>.pkg SFEcurl
+# pkgadd -d SFEgit-1.5.2.2-<os>-<platform>.pkg SFEgit
+"""]]
+You might be asked to install SFEdiffutils here, just answer yes. 
+
+
+## Git from Source
+
+To grab the Git sources and build it from scratch, look for instructions in the [[official Git site|http://git.or.cz/]]. 

@@ -1,0 +1,28 @@
+
+
+# A Point of Control: APOC
+
+****APOC provides a framework for centralized storage of application  and desktop configuration which may be applied to users, organizations and hosts.**** 
+[[!table header="no" class="mointable" data="""
+[[[[!img Apoc/Downloads]|Apoc/Downloads]] |  ******[[Downloads|Apoc/Downloads]]******  |  [[[[!img Apoc/Documentation]|Apoc/Documentation]]  |  ******[[Learn|Apoc/Documentation]]****** 
+ [[[[!img Apoc/GettingInvolved]|Apoc/GettingInvolved]]  |  ******[[Get Involved|Apoc/GettingInvolved]]******  |  [[[[!img Apoc/About]|Apoc/About]]  |  ******[[About|Apoc/GettingInvolved]]****** 
+"""]]
+
+
+
+---
+
+ 
+## Supported Applications
+[[!table header="no" class="mointable" data="""
+ [[[[!img http://www.mozilla.org]|http://www.mozilla.org]] |  [[Firefox 1.5 template package|http://apoc.freedesktop.org/downloads/templates/firefox_template_package1.5-0.tar.gz]]  | [[[[!img http://www.gnome.org]|http://www.gnome.org]] |  [[GNOME 2.6 template package|http://apoc.freedesktop.org/downloads/templates/gnome_template_package2.6-0.tar.gz]] 
+  |  The Firefox adapter hasn't been released yet  |   |  [[GConf Adapter|Apoc/Downloads]] 
+[[[[!img http://www.go-evolution.org/]|http://www.go-evolution.org/]] |  [[Evolution 1.4 template package|http://apoc.freedesktop.org/downloads/templates/evolution_template_package1.4-0.tar.gz]] |  | 
+ | [[GConf Adapter|Apoc/Downloads]] |  | 
+"""]]
+
+
+
+---
+
+ [[!img http://apoc.freedesktop.org/images/apoc.png] 

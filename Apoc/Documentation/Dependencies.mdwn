@@ -1,0 +1,39 @@
+
+[[!toc ]] 
+
+Here you can find a comprehensive list of dependencies and instructions on how to install the dependencies to build APOC on different platforms for each component. 
+
+
+# Dependencies
+
+
+## SPI
+
+* Java SE JDK 1.4 or higher 
+* The autotools set (autoconf, automake and libtool) 
+* Apache ANT [[http://ant.apache.org/|http://ant.apache.org/]] 
+* [[Mozilla (former Netscape's) Directory SDK for Java|http://www.mozilla.org/directory/javasdk.html]] 
+
+## Desktop Agent
+
+* The Apoc SPI and its dependencies 
+* Gnome's [[libXML2|http://xmlsoft.org/]] 
+* Heimdal's Generic Security Services C implementation ([[gssapi|http://www.pdc.kth.se/heimdal/]]) 
+* Oracle's (formerly Sleepycat's) [[Berkeley DB libraries|http://www.oracle.com/database/berkeley-db/db/index.html]] with Java support enabled 
+
+## Desktop Manager
+
+* The Apoc SPI and its dependencies 
+* [[Mozilla (former Netscape's) Directory SDK for Java|http://www.mozilla.org/directory/javasdk.html]] 
+* [[Sun Java Web Console 3|http://www.sun.com/download/products.xml?id=46cb72a9]] and its dependencies 
+
+# Ubuntu Instructions
+
+
+[[!format txt """
+$ sudo apt-get install build-essential pkg-config automake-1.9 autoconf sun-java6-jdk ant libdb4.2-java-dev libgssapi4-heimdal heimdal-dev libxml2-dev
+"""]]
+
+# Solaris Instructions
+
+You need to install JDS Common Build Environment to get autotools and ant. Follow the instructions from the  [[OpenSolaris.org JDS CBE documentation page|http://www.opensolaris.org/os/project/jds/contributing/building/#jds-cbe]]. 
