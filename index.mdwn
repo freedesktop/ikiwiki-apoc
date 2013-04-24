@@ -6,8 +6,8 @@ APOC provides a framework for centralized storage of application  and desktop co
 
 * [[Downloads|Downloads]]
 * [[Learn|Documentation]]
-* [[Get Involved|Apoc/GettingInvolved]]
-* [[About|Apoc/GettingInvolved]]
+* [[Get Involved|GettingInvolved]]
+* [[About|GettingInvolved]]
 
 ## Supported Applications
 
