@@ -4,7 +4,7 @@
 
 APOC provides a framework for centralized storage of application  and desktop configuration which may be applied to users, organizations and hosts.
 
-* [[Downloads|Apoc/Downloads]]
+* [[Downloads|Downloads]]
 * [[Learn|Documentation]]
 * [[Get Involved|Apoc/GettingInvolved]]
 * [[About|Apoc/GettingInvolved]]
@@ -12,8 +12,8 @@ APOC provides a framework for centralized storage of application  and desktop co
 ## Supported Applications
 
 * [[Firefox 1.5 template package|http://apoc.freedesktop.org/downloads/templates/firefox_template_package1.5-0.tar.gz]] (The Firefox adapter hasn't been released yet) 
-* [[GNOME 2.6 template package|http://apoc.freedesktop.org/downloads/templates/gnome_template_package2.6-0.tar.gz]] [[GConf Adapter|Apoc/Downloads]] 
-* [[Evolution 1.4 template package|http://apoc.freedesktop.org/downloads/templates/evolution_template_package1.4-0.tar.gz]] [[GConf Adapter|Apoc/Downloads]]
+* [[GNOME 2.6 template package|http://apoc.freedesktop.org/downloads/templates/gnome_template_package2.6-0.tar.gz]] [[GConf Adapter|Downloads]] 
+* [[Evolution 1.4 template package|http://apoc.freedesktop.org/downloads/templates/evolution_template_package1.4-0.tar.gz]] [[GConf Adapter|Downloads]]
 
 ---
 
