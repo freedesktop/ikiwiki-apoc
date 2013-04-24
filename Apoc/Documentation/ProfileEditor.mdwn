@@ -1,5 +1,3 @@
-
-
 # The Profile Editor
 
 [[!toc 2]] 
@@ -44,7 +42,7 @@ Copy the previously created zip file to `/usr/local/var/apoc/Policies/profiles/P
 Ensure that the Configuration Agent is configured to apply available local policies. To do this, set the `ApplyLocalPolicy` variable to yes in the `${ConfigDir}apocd.properties` file. `${ConfigDir} `corresponds to the value of the Desktop Agent's configuration directory which is /usr/local/etc by default. 
 
 Now restart the Desktop Agent running: 
-[[!format txt """
-$ /usr/local/lib/apoc/apocd restart
-"""]]
+
+    $ /usr/local/lib/apoc/apocd restart
+
 Any local policy deployed in this manner will be made available to clients during the next Configuration Agent change detection cycle. 

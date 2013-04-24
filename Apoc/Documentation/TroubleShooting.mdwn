@@ -106,10 +106,8 @@ To check that the LDAP server is running, run the command `ps -ef | grep slapd`.
 
 To ensure that the LDAP server has been properly setup, perform the following command: 
 
+    ldapsearch [-x] -h <host> -p <port> -b ou=apocregistry,ou=default,ou=organizationconfig,ou=1.0,ou=apocservice,ou=services<base> ou=apocregistry sunkeyvalue`
 
-[[!format txt """
-ldapsearch [-x] -h <host> -p <port> -b ou=apocregistry,ou=default,ou=organizationconfig,ou=1.0,ou=apocservice,ou=services<base> ou=apocregistry sunkeyvalue`
-"""]]
 where <host>, <port>, and <base> match the values found in either the [[APOC Manager configuration|Apoc/Documentation/TroubleShooting]] or the [[APOC Agent configuration|Apoc/Documentation/TroubleShooting]]. The result of this search should be one entry with unreadable attributes (base 64 encoded values). The `-x` flag may be required or not depending on the version of `ldapsearch` used, try with it and remove it if a usage message is displayed. If no entry is found, that particular <base> on that particular <host> has not been prepared for use with APOC. 
 
 Follow the instructions in the installation guide to run the deployment tool and prepare the LDAP server, please note that if the LDAP server uses non-standard attributes or object classes for its organisations, roles or users, or if users are not stored in `ou=People` containers, the file named [[OrganisationMapping|OrganisationMapping]] needs to be modified to reflect these differences *prior* to running the `deployApoc` or `createServiceTree` scripts. 
@@ -177,17 +175,17 @@ The current log level of the APOC Manager, which is actually the log level of th
 #### Enabling the APOC Agent
 
 To enable the APOC Agent you need to configure the policymgr.properties, file located in /usr/local/etc by default, here's an example of a basic anonymous configuration: 
-[[!format txt """
-#-----------------------------#
-# Basic Configuration Example #
-#-----------------------------#
 
-#PROVIDER_URL = ldap://server1.freedesktop.org:389/o=mySuffixDn
-#AuthType=Anonymous
-#AuthDn=
-#Password=
-#ConnectTimeout=1
-"""]]
+    #-----------------------------#
+    # Basic Configuration Example #
+    #-----------------------------#
+    
+    #PROVIDER_URL = ldap://server1.freedesktop.org:389/o=mySuffixDn
+    #AuthType=Anonymous
+    #AuthDn=
+    #Password=
+    #ConnectTimeout=1
+
 <a name="ConfigureAPOCAgent"></a> 
 #### Configuring the APOC Agent
 

@@ -23,37 +23,33 @@ You will need to use the Git client to download the APOC source repository. If y
 #### SPI
 
 [[Browse the code|http://gitweb.freedesktop.org/?p=apoc-spi.git;a=tree]] or retrieve the git repository: 
-[[!format txt """
-$ git clone git://anongit.freedesktop.org/git/apoc-spi
-"""]]
+
+    $ git clone git://anongit.freedesktop.org/git/apoc-spi
 
 #### Agent
 
 [[Browse the code|http://gitweb.freedesktop.org/?p=apoc-agent.git;a=tree]] or retrieve the git repository: 
-[[!format txt """
-$ git clone git://anongit.freedesktop.org/git/apoc-agent
-"""]]
+
+    $ git clone git://anongit.freedesktop.org/git/apoc-agent
 
 #### Template Pacakges
 
 [[Browse the code|http://gitweb.freedesktop.org/?p=apoc-template-packages.git;a=tree]] or retrieve the git repository: 
-[[!format txt """
-$ git clone git://anongit.freedesktop.org/git/apoc-template-packages
-"""]]
+
+    $ git clone git://anongit.freedesktop.org/git/apoc-template-packages
 
 #### Profile Editor
 
 [[Browse the code|http://gitweb.freedesktop.org/?p=apoc-profile-editor.git;a=tree]] or retrieve the git repository: 
-[[!format txt """
-$ git clone git://anongit.freedesktop.org/git/apoc-profile-editor
-"""]]
+
+    $ git clone git://anongit.freedesktop.org/git/apoc-profile-editor
 
 #### Manager
 
 [[Browse the code|http://gitweb.freedesktop.org/?p=apoc-manager.git;a=tree]] or retrieve the git repository: 
-[[!format txt """
-$ git clone git://anongit.freedesktop.org/git/apoc-manager
-"""]]
+
+    $ git clone git://anongit.freedesktop.org/git/apoc-manager
+
 (!) Once you have downloaded the source files, see [[building APOC from source|Apoc/Documentation/BuildingInstructions]]. 
 
 
@@ -63,9 +59,8 @@ $ git clone git://anongit.freedesktop.org/git/apoc-manager
 #### GConf Adapter
 
 The source code of the GConf APOC adapter is hosted in the GNOME subversion repository, run the following command to checkout the code: 
-[[!format txt """
-$ svn co http://svn.gnome.org/svn/gconf-apoc/trunk gconf-apoc
-"""]]
+
+    $ svn co http://svn.gnome.org/svn/gconf-apoc/trunk gconf-apoc
 
 ### Templates
 

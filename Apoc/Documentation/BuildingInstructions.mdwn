@@ -19,10 +19,8 @@ The following steps should be completed in the root directory of your apoc-spi l
 
 /!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
 
+    $ ./autogen.sh --help
 
-[[!format txt """
-$ ./autogen.sh --help
-"""]]
 If no errors occur, the configure script will be generated successfully and its help output would be shown. 
 
 
@@ -30,20 +28,18 @@ If no errors occur, the configure script will be generated successfully and its 
 
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
+    $ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
 
-[[!format txt """
-$ ./configure --prefix=/usr --with-ns-ldap-path=/path/to/ldapjdk.jar
-"""]]
 /!\ **NOTE**: We assume here that java, javac and ant are in the binary path. The ldapjdk.jar would be looked by default on /usr/share/lib/apoc/ldapjdk.jar, it can be located elsewhere, use the --with-ns-ldap-path option used in the example for any other location. 
 
 
 ### Step 3: Building the sources
 
 If the configuration ends successfully, then you should build and install the sources: 
-[[!format txt """
-$ make
-$ make install
-"""]]
+
+    $ make
+    $ make install
+
 Once complete, the SPI jar file, spi.jar should be available under your prefix directory as share/lib/apoc/spi.jar. 
 
 
@@ -60,30 +56,23 @@ Check [[the dependencies section|Apoc/Documentation/Dependencies]] before to pro
 
 First, make sure you have installed the software listed in the [[dependencies section|Apoc/Dependencies]], type this to generate the configure script: 
 
-
-[[!format txt """
-$ ./autogen.sh --help
-"""]]
+    $ ./autogen.sh --help
 
 ### Step 2: Calling the configure script
 
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option.  
 
+    $ ./configure --prefix=/usr --with-bdb-path=/path/to/db.jar
 
-[[!format txt """
-$ ./configure --prefix=/usr \
-              --with-bdb-path=/path/to/db.jar
-"""]]
 /!\ **NOTE**: You should use the same prefix than the SPI, otherwise you need to set the --with-apoc-dir option. The db.jar would be looked by default on /usr/share/lib/apoc/db.jar, it can be located elsewhere, use the --with-bdb-path option used in the example for any other location. 
 
 
 ### Step 3: Building the sources
 
 If the configuration ends successfully, then you should build and install the sources: 
-[[!format txt """
-$ make
-$ make install
-"""]]
+
+    $ make
+    $ make install
 
 ### Post Installation
 
@@ -103,10 +92,8 @@ The following steps should be completed in the root directory of your apoc-templ
 
 Type this in the root path of the source code to generate the configure script: 
 
+    $ ./autogen.sh --help
 
-[[!format txt """
-$ ./autogen.sh --help
-"""]]
 If no errors occur, the configure script will be generated successfully and its help output would be shown. 
 
 
@@ -114,17 +101,13 @@ If no errors occur, the configure script will be generated successfully and its 
 
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
-
-[[!format txt """
-$ ./configure --prefix=/usr
-"""]]
+    $ ./configure --prefix=/usr
 
 ### Step 3: Building the sources
 
 If the configuration ends successfully, then you should build and install the sources: 
-[[!format txt """
-$ make install
-"""]]
+
+    $ make install
 
 ## Profile Editor
 
@@ -139,10 +122,8 @@ The profile editor depends on the SPI and the Template Packages.
 
 Type this in the root path of the source code to generate the configure script: 
 
+    $ ./autogen.sh --help
 
-[[!format txt """
-$ ./autogen.sh --help
-"""]]
 If no errors occur, the configure script will be generated successfully and its help output would be shown. 
 
 
@@ -150,20 +131,17 @@ If no errors occur, the configure script will be generated successfully and its 
 
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
+    $ ./configure --prefix=/usr
 
-[[!format txt """
-$ ./configure --prefix=/usr
-"""]]
 /!\ **NOTE**: You should use the same prefix than the SPI. 
 
 
 ### Step 3: Building the sources
 
 If the configuration ends successfully, then you should build and install the sources: 
-[[!format txt """
-$ make
-$ make install
-"""]]
+
+    $ make
+    $ make install
 
 ## Desktop Manager
 
@@ -178,10 +156,8 @@ Check [[the dependencies section|Apoc/Documentation/Dependencies]] before to pro
 
 Type this in the root path of the source code to generate the configure script: 
 
+    $ ./autogen.sh --help
 
-[[!format txt """
-$ ./autogen.sh --help
-"""]]
 If no errors occur, the configure script will be generated successfully and its help output would be shown. 
 
 
@@ -189,46 +165,38 @@ If no errors occur, the configure script will be generated successfully and its 
 
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
+    $ ./configure --prefix=/usr \
+                  --with-webconsole-prefix=/opt/sun/webconsole \
+                  --with-jato-path=/opt/sun/share/lib/jato.jar \
+                  --with-ns-ldap-path=/usr/share/lib/java/ldapjdk.jar
 
-[[!format txt """
-$ ./configure --prefix=/usr \
-              --with-webconsole-prefix=/opt/sun/webconsole \
-              --with-jato-path=/opt/sun/share/lib/jato.jar \
-              --with-ns-ldap-path=/usr/share/lib/java/ldapjdk.jar
-"""]]
 /!\ **NOTE**: You should use the same prefix than the SPI, otherwise you need to set the --with-apoc-dir option. 
 
 
 ### Step 3: Building the sources
 
 If the configuration ends successfully, then you should build and install the sources: 
-[[!format txt """
-$ make
-$ make install
-"""]]
+
+    $ make
+    $ make install
 
 ### Step 4: Post installation
 
 After installation, you should copy or make symbolic link from some files of the Java Web Console repository, the following example assumes that the webconsole is installed under /opt/sun/webconsole: 
 
+    $ cd /opt/sun/webconsole/apoc
+    $ ln -s /opt/sun/webconsole/private/import/tld WEB-INF/
+    $ ln -s /opt/sun/webconsole/private/import/lib/registrationservlet.jar WEB-INF/lib/
+    $ ln -s /opt/sun/webconsole/private/import/help com_sun_web_ui/
+    $ ln -s /opt/sun/webconsole/private/import/jsp com_sun_web_ui/
 
-[[!format txt """
-$ cd /opt/sun/webconsole/apoc
-$ ln -s /opt/sun/webconsole/private/import/tld WEB-INF/
-$ ln -s /opt/sun/webconsole/private/import/lib/registrationservlet.jar WEB-INF/lib/
-$ ln -s /opt/sun/webconsole/private/import/help com_sun_web_ui/
-$ ln -s /opt/sun/webconsole/private/import/jsp com_sun_web_ui/
-"""]]
 Finally, you need to install the APOC Template Packages on the apoc/packages directory, if you have them installed already somewhere else, a symbolink link will work here as well: 
 
+    $ ln -s /usr/share/apoc/packages /opt/sun/webconsole/apoc/packages
 
-[[!format txt """
-$ ln -s /usr/share/apoc/packages /opt/sun/webconsole/apoc/packages
-"""]]
 Finally you will have to deploy your app on the Java Web Console using the wcadmin command as root: 
-[[!format txt """
-$ wcadmin -a apoc -x apoc /opt/sun/webconsole/apoc
-"""]]
+
+    $ wcadmin -a apoc -x apoc /opt/sun/webconsole/apoc
 
 # Build the adapters
 
@@ -240,10 +208,8 @@ $ wcadmin -a apoc -x apoc /opt/sun/webconsole/apoc
 
 /!\ **NOTE**: Tarball releases already include a configure script so this step is unnecessary in that case. 
 
+    $ ./autogen.sh --help
 
-[[!format txt """
-$ ./autogen.sh --help
-"""]]
 If no errors occur, the configure script will be generated successfully and its help output would be shown. 
 
 
@@ -251,15 +217,11 @@ If no errors occur, the configure script will be generated successfully and its 
 
 In the root path of the source code, you should execute the configure script. For more information on changing the default paths, execute configure with the --help option. 
 
-
-[[!format txt """
-$ ./configure --prefix=/usr
-"""]]
+    $ ./configure --prefix=/usr
 
 ### Step 3: Building the sources
 
 If the configuration ends successfully, then you should build and install the sources: 
-[[!format txt """
-$ make
-$ make install
-"""]]
+
+    $ make
+    $ make install

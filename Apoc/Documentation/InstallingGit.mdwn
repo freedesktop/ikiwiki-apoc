@@ -8,16 +8,14 @@ Git is a distributed control management software used by the [[freedesktop.org|h
 ## Git on Ubuntu/Debian
 
 Look for the package git-core on the Synaptic package management tool, or typing this: 
-[[!format txt """
-$ sudo apt-get install git-core
-"""]]
+
+    $ sudo apt-get install git-core
 
 ## Git on Fedora
 
 Type this as root: 
-[[!format txt """
-# yum install git-core
-"""]]
+
+    # yum install git-core
 
 ## Git on Solaris
 
@@ -30,11 +28,9 @@ Git for Solaris is available as a set of binary packages built from the [[Spec F
 
 Download the packages and execute as root: 
 
+    # pkgadd -d SFEcurl-7.16.2-<os>-<platform>.pkg SFEcurl
+    # pkgadd -d SFEgit-1.5.2.2-<os>-<platform>.pkg SFEgit
 
-[[!format txt """
-# pkgadd -d SFEcurl-7.16.2-<os>-<platform>.pkg SFEcurl
-# pkgadd -d SFEgit-1.5.2.2-<os>-<platform>.pkg SFEgit
-"""]]
 You might be asked to install SFEdiffutils here, just answer yes. 
 
 
