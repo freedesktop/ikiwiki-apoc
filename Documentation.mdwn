@@ -1,10 +1,7 @@
-
-
 # Documentation
-[[!table header="no" class="mointable" data="""
-[[[[!img Apoc/Documentation/Faq]|Apoc/Documentation/Faq]] |  **[[Frequently Asked Questions|Documentation/Faq]]**  |  [[[[!img Apoc/Documentation/TroubleShooting]|Apoc/Documentation/TroubleShooting]]  |  **[[Trouble Shooting|Documentation/TroubleShooting]]**
-"""]]
 
+* [[Frequently Asked Questions|Documentation/Faq]]
+* [[Trouble Shooting|Documentation/TroubleShooting]]
 * [[Understanding the APOC Architecture|Documentation/Architecture]] 
 * [[Profile Editor Manual|Documentation/ProfileEditor]] 
 
