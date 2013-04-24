@@ -7,7 +7,7 @@
 
 ## Bootstrap
 
-You first need to install all the dependencies. They're listed in the [[dependencies section|Apoc/Documentation/Dependencies]]. To get a better overall understanding of the source code read the [[architectural overview|Apoc/Documentation/Architecture]] and the [[developer documentation|http://docs.sun.com/app/docs/doc/819-2728]]. 
+You first need to install all the dependencies. They're listed in the [[dependencies section|Apoc/Documentation/Dependencies]]. To get a better overall understanding of the source code read the [[architectural overview|Documentation/Architecture]] and the [[developer documentation|http://docs.sun.com/app/docs/doc/819-2728]]. 
 
 
 ## SPI
