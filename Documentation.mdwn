@@ -10,7 +10,7 @@
 
 ## Miscelaneous Documents
 
-* [[Build APOC from source|Apoc/Documentation/BuildingInstructions]] 
+* [[Build APOC from source|Documentation/BuildingInstructions]] 
 * [[How to install Git|Apoc/Documentation/InstallingGit]] 
 
 ## Sun Desktop Manager Documentation
