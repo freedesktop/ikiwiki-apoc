@@ -2,7 +2,7 @@
 
 # Installing Git
 
-Git is a distributed control management software used by the [[freedesktop.org|http://www.freedesktop.org]] to host its projects. To get the latest code available for the latest version or other code branches of APOC you need to use a Git client. You can see more instructions on how to get the latest APOC source code on the [[download section|Apoc/Downloads]]. 
+Git is a distributed control management software used by the [[freedesktop.org|http://www.freedesktop.org]] to host its projects. To get the latest code available for the latest version or other code branches of APOC you need to use a Git client. You can see more instructions on how to get the latest APOC source code on the [[download section|Downloads]]. 
 
 [[!toc ]] 
 ## Git on Ubuntu/Debian
