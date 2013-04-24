@@ -50,7 +50,7 @@ You will need to use the Git client to download the APOC source repository. If y
 
     $ git clone git://anongit.freedesktop.org/git/apoc-manager
 
-(!) Once you have downloaded the source files, see [[building APOC from source|Apoc/Documentation/BuildingInstructions]]. 
+(!) Once you have downloaded the source files, see [[building APOC from source|Documentation/BuildingInstructions]]. 
 
 
 ### Adapters
