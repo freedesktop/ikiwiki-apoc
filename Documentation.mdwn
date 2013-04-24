@@ -6,7 +6,7 @@
 """]]
 
 * [[Understanding the APOC Architecture|Apoc/Documentation/Architecture]] 
-* [[Profile Editor Manual|Apoc/Documentation/ProfileEditor]] 
+* [[Profile Editor Manual|Documentation/ProfileEditor]] 
 
 ## Miscelaneous Documents
 
