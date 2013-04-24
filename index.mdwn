@@ -5,7 +5,7 @@
 APOC provides a framework for centralized storage of application  and desktop configuration which may be applied to users, organizations and hosts.
 
 * [[Downloads|Apoc/Downloads]]
-* [[Learn|Apoc/Documentation]]
+* [[Learn|Documentation]]
 * [[Get Involved|Apoc/GettingInvolved]]
 * [[About|Apoc/GettingInvolved]]
 
